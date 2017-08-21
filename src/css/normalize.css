@@ -1,0 +1,117 @@
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+}
+
+p {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button:hover,
+button:active,
+button:focus,
+input:hover,
+input:active,
+input:focus,
+select:hover,
+select:active,
+select:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
+  outline: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="search"] {
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
