@@ -24,13 +24,14 @@ import {FinancialPerformanceComponent} from './financial-performance/financial-p
         pathMatch: 'full'
       },
       {path: 'home', component: FinancialPerformanceComponent},
+      {path: 'fin-perf', component: FinancialPerformanceComponent},
     ])
   ],
   exports: [
     ChartModule,
     RouterModule
   ],
-  providers: [ChartModule],
+  providers: [ChartModule, FinancialPerformanceComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
