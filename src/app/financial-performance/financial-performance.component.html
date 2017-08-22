@@ -1,9 +1,19 @@
 <div class="fp-item">
   <div class="header">
-    <span>return on assets</span>
+    <span>{{myCharts[1]?.title}}</span>
   </div>
   <div class="circle-title">
-    <span>50%</span>
+    <span>{{myCharts[1]?.circleTitleData}}</span>
   </div>
-  <chart [type]="type" [data]="data" [options]="options"></chart>
+  <chart [type]="myCharts[1]?.type" [data]="myCharts[1]?.data" [options]="myCharts[1]?.options"></chart>
+</div>
+
+<div class="fp-item">
+  <div class="header">
+    <span>{{myCharts[2]?.title}}</span>
+  </div>
+  <div class="circle-title">
+    <span>{{myCharts[2]?.circleTitleData}}</span>
+  </div>
+  <chart [type]="myCharts[2]?.type" [data]="myCharts[2]?.data" [options]="myCharts[2]?.options"></chart>
 </div>

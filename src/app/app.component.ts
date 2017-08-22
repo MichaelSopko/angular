@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    var temperatures = [
+   /* var temperatures = [
       {temp: 32, month: 'January'},
       {temp: 38, month: 'February'},
       {temp: 47, month: 'March'},
@@ -45,13 +45,15 @@ export class AppComponent implements AfterViewInit {
       // this g is where the bar chart will be drawn
       .append('g')
       // translate it to leave room for the left and top margins
-      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');*/
 
 // x value determined by month
+/*/!*
     var monthScale = d3.scaleBand()
       .domain(months)
       .range([0, width])
       .paddingInner(0.1);
+*!/
 
 
 // the width of the bars is determined by the scale
@@ -139,7 +141,7 @@ export class AppComponent implements AfterViewInit {
       return c*9/5 + 32;
     }
 
-    setInterval(convert, 5000);
+    setInterval(convert, 5000);*/
 
 
     /*var chart = c3.generate({
