@@ -1,23 +1,37 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { ChartModule  } from 'angular2-chartjs';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {ChartModule} from 'angular2-chartjs';
+import {RouterModule} from "@angular/router";
+
 import Chart from 'chart.js';
 import * as  c3 from 'c3';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {FinancialPerformanceComponent} from './financial-performance/financial-performance.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FinancialPerformanceComponent
   ],
   imports: [
     BrowserModule,
-    ChartModule
+    ChartModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {path: 'home', component: FinancialPerformanceComponent},
+    ])
   ],
   exports: [
-    ChartModule
+    ChartModule,
+    RouterModule
   ],
-  providers: [ChartModule ],
+  providers: [ChartModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

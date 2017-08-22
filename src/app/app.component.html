@@ -55,17 +55,18 @@
           <span class="fa fa-caret-down chevron"></span>
         </a>
         <ul class="side-sub-menu">
-          <li><a class="sub-menu-item" href="javascript:;">Dashboard v.1</a></li>
-          <li><a class="sub-menu-item active" href="javascript:;">Dashboard v.2</a></li>
-          <li><a class="sub-menu-item" href="javascript:;">Dashboard v.3</a></li>
-          <li><a class="sub-menu-item" href="javascript:;">Dashboard v.4</a></li>
-          <li><a class="sub-menu-item" href="javascript:;">Dashboard v.5</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Management KPI</a></li>
+          <li><a class="sub-menu-item active" href="javascript:;">Financial performance</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Investor relations</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Sales cycle length performance</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Sales conversion</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Financial overview</a></li>
+          <li><a class="sub-menu-item" href="javascript:;">Sales performance</a></li>
         </ul>
       </li>
     </ul>
   </aside>
   <main class="min-content">
-
     <div style="width:500px;height:500px;background-color: #bbb;padding-top: 100px">
       <div style="
       width: 200px;
@@ -78,11 +79,8 @@
         <span>50%</span>
       </div>
     </div>
-
-
-<!--
     <chart [type]="type" [data]="data" [options]="options"></chart>
--->
+    <router-outlet></router-outlet>
   </main>
 
 
