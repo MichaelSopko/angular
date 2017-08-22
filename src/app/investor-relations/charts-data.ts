@@ -3,9 +3,16 @@ export const chartData: any =
     'RETURN ON ASSETS': {
       title: 'RETURN ON ASSETS',
       label: 'RoA',
-      circleTitleData: '16.5%',
+      circleTitleData: '17%',
       labels: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
+    },
+    'RETURN ON EQUITY': {
+      title: 'RETURN ON EQUITY',
+      label: 'RoE',
+      circleTitleData: '33.6%',
+      labels: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
+      data: [0.26, 0.28, 0.29, 0.31, 0.31, 0.33, 0.34]
     },
     'WORKING CAPITAL RATIO': {
       title: 'WORKING CAPITAL RATIO',
@@ -14,17 +21,10 @@ export const chartData: any =
       labels: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [2.2, 2.1, 2.4, 2.3, 2.7, 2.9, 4.8]
     },
-    'RETURN ON EQUITY': {
-      title: 'RETURN ON EQUITY',
-      label: 'RoE',
-      circleTitleData: '32%',
-      labels: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
-      data: [0.26, 0.28, 0.29, 0.31, 0.31, 0.33, 0.34]
-    },
     'DEBT-EQUITY RATIO': {
       title: 'DEBT-EQUITY RATIO',
       circleTitleData: '0.4:1',
-      label: 'DER',
+      label: 'DebtEquityRatio',
       labels: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [0.5, 0.4, 0.37, 0.48, 0.45, 0.54, 0.32]
     },
@@ -38,12 +38,15 @@ export const chartData: any =
         titleFontStyle: 'bold',
         titleFontColor: 'black',
         displayColors: false,
-        borderColor: 'black',
-        borderWidth: 1,
       },
       scales: {
         yAxes: [{
           stacked: true,
+          ticks: {
+            max: 0.6,
+            min: 0,
+            stepSize: 0.1
+          },
           display: false,
           gridLines: {
             display: false,
@@ -54,16 +57,20 @@ export const chartData: any =
           ticks: {
             autoSkip: false,
             maxRotation: 45,
-            minRotation: 45
+            minRotation: 45,
+            fontColor: '#fff'
           },
           gridLines: {
             displayOnChartArea: false,
             drawOnChartArea: false,
             offsetGridLines: true,
+            color: '#fff',
+            zeroLineColor: '#fff',
             drawBorder: true,
             drawTicks: true,
             tickMarkLength: 10
-          }
+          },
+
         }]
       }
     }

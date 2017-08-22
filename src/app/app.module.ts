@@ -35,6 +35,7 @@ import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
       },
       {path: 'home', component: FinancialPerformanceComponent},
       {path: 'fin-perf', component: FinancialPerformanceComponent},
+      {path: 'inv-rel', component: InvestorRelationsComponent},
     ])
   ],
   exports: [

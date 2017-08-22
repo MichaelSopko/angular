@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import{chartData} from './charts-data';
 
 @Component({
   selector: 'app-investor-relations',
@@ -6,8 +7,174 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./investor-relations.component.scss']
 })
 export class InvestorRelationsComponent implements OnInit {
+  myCharts = [];
 
-  constructor() { }
+
+  constructor() {
+
+    this.myCharts[1] = {};
+    this.myCharts[1].type = 'bar';
+    this.myCharts[1].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+    this.myCharts[1].data = {
+      labels: chartData['RETURN ON ASSETS'].labels,
+      datasets: [
+        {
+          label: chartData['RETURN ON ASSETS'].label,
+          backgroundColor: '#fff',
+          textColor: '#fff',
+          data: chartData['RETURN ON ASSETS'].data
+        }
+      ]
+    };
+
+    this.myCharts[1].options = chartData['options'];
+
+
+    this.myCharts[2] = {};
+    this.myCharts[2].type = 'bar';
+    this.myCharts[2].title = chartData['RETURN ON EQUITY'].title;
+    this.myCharts[2].circleTitleData = chartData['RETURN ON EQUITY'].circleTitleData;
+    this.myCharts[2].data = {
+      labels: chartData['RETURN ON EQUITY'].labels,
+      datasets: [
+        {
+          label: chartData['RETURN ON EQUITY'].label,
+          backgroundColor: '#fff',
+          textColor: '#fff',
+
+          data: chartData['RETURN ON EQUITY'].data
+        }
+      ]
+    };
+    this.myCharts[2].options = {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        backgroundColor: 'white',
+        bodyFontColor: 'black',
+        titleFontStyle: 'bold',
+        titleFontColor: 'black',
+        displayColors: false,
+      },
+      scales: {
+        yAxes: [{
+          stacked: true,
+          ticks: {
+            max: 0.4,
+            min: 0,
+            stepSize: 0.1
+          },
+          display: false,
+          gridLines: {
+            display: false,
+            color: 'rgba(255,99,132,0.2)'
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            autoSkip: false,
+            maxRotation: 45,
+            minRotation: 45,
+            fontColor: '#fff'
+          },
+          gridLines: {
+            displayOnChartArea: false,
+            drawOnChartArea: false,
+            offsetGridLines: true,
+            color: '#fff',
+            zeroLineColor: '#fff',
+            drawBorder: true,
+            drawTicks: true,
+            tickMarkLength: 10
+          },
+
+        }]
+      }
+    }
+
+    this.myCharts[3] = {};
+    this.myCharts[3].type = 'line';
+    this.myCharts[3].title = chartData['RETURN ON EQUITY'].title;
+    this.myCharts[3].circleTitleData = chartData['RETURN ON EQUITY'].circleTitleData;
+    this.myCharts[3].data = {
+      labels: chartData['RETURN ON EQUITY'].labels,
+      datasets: [
+        {
+          label: chartData['RETURN ON EQUITY'].label,
+          lineTension: 0,
+          textColor: '#fff',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: '#fff',
+          pointBackgroundColor: '#fff',
+          pointHitRadius: 12,
+          pointStyle: 'rect',
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
+          pointHoverBorderWidth: 4,
+
+          data: chartData['RETURN ON EQUITY'].data
+        }
+      ]
+    };
+    this.myCharts[3].options = chartData['options'];
+
+    this.myCharts[4] = {};
+    this.myCharts[4].type = 'line';
+    this.myCharts[4].title = chartData['DEBT-EQUITY RATIO'].title;
+    this.myCharts[4].circleTitleData = chartData['DEBT-EQUITY RATIO'].circleTitleData;
+    this.myCharts[4].data = {
+      labels: chartData['DEBT-EQUITY RATIO'].labels,
+      datasets: [
+        {
+          label: chartData['DEBT-EQUITY RATIO'].label,
+          textColor: '#fff',
+          lineTension: 0,
+          backgroundColor: '#cddde3',
+          borderColor: '#fff',
+          pointBackgroundColor: '#fff',
+          pointHitRadius: 12,
+          pointStyle: 'rect',
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
+          pointHoverBorderWidth: 4,
+
+          data: chartData['DEBT-EQUITY RATIO'].data
+        }
+      ]
+    };
+    this.myCharts[4].options = chartData['options'];
+
+    this.myCharts.forEach((chart) => {
+      chart.options.animation = {
+        // onComplete: drawNumbers,
+        onProgress: drawNumbers
+      }
+    });
+
+    function drawNumbers() {
+      var ctx = this.chart.ctx;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+
+      this.chart.config.data.datasets.forEach(function (dataset) {
+        ctx.fillStyle = dataset.textColor;
+        ctx.fontWeight = 'aasas';
+
+        for (var i = 0; i < dataset.data.length; i++) {
+          var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+          var scaleMax = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
+          var yPos = (scaleMax - model.y) / scaleMax >= 0.93 ? model.y + 20 : model.y - 5;
+          ctx.fillText(dataset.data[i], model.x, yPos);
+        }
+      });
+    }
+  }
 
   ngOnInit() {
   }
