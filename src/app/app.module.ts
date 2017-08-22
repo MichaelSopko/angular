@@ -8,11 +8,21 @@ import * as  c3 from 'c3';
 
 import {AppComponent} from './app.component';
 import {FinancialPerformanceComponent} from './financial-performance/financial-performance.component';
+import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
+import { SalesCycleComponent } from './sales-cycle/sales-cycle.component';
+import { SalesConversionComponent } from './sales-conversion/sales-conversion.component';
+import { FinancialOverviewComponent } from './financial-overview/financial-overview.component';
+import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FinancialPerformanceComponent
+    FinancialPerformanceComponent,
+    InvestorRelationsComponent,
+    SalesCycleComponent,
+    SalesConversionComponent,
+    FinancialOverviewComponent,
+    MenegmentKpiComponent,
   ],
   imports: [
     BrowserModule,
