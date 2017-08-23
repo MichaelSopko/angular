@@ -1,0 +1,39 @@
+.background-cadeblue {
+  background-color: #54a2ae
+}
+
+.background-darkslategray {
+  background-color: #424c4e
+}
+
+.background-steelblue {
+  background-color: #377991
+}
+
+.fp-item {
+  width:500px;
+
+
+  .header {
+    color: white;text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-top: 1em;
+  }
+
+  .circle-title {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: proxima_nova_rgregular, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
