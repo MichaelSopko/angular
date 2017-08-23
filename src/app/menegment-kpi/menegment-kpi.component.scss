@@ -1,0 +1,18 @@
+ path.domain, .tick {
+  visibility: hidden !important;
+}
+ :host .c3-xgrid-focus {
+   display: none;
+ }
+ :host .c3-grid .c3-xgrid-focus {
+   visibility : hidden !important;
+ }
+ .c3-event-rects { display: none }
+ .c3-axis-y .tick {
+   display: none;
+ }
+   .c3-xgrid-focus > line {
+     width: 0;
+   }
+
+
