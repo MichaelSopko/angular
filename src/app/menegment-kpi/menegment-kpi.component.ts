@@ -37,6 +37,9 @@ export class MenegmentKpiComponent implements OnInit {
           return color;
         },
       },
+      tooltip: {
+        grouped: false
+      },
       color: {
         pattern: ['#f5de6d', '#f5aa61']
       },
@@ -76,6 +79,9 @@ export class MenegmentKpiComponent implements OnInit {
         ],
         type: 'bar'
       },
+      tooltip: {
+        grouped: false
+      },
       color: {
         pattern: ['#ba3d5d', '#6b275a']
       },
@@ -105,6 +111,9 @@ export class MenegmentKpiComponent implements OnInit {
           ['Current Period', 24]
         ],
         type: 'bar'
+      },
+      tooltip: {
+        grouped: false
       },
       color: {
         pattern: ['#35b3f7', '#0577b3']

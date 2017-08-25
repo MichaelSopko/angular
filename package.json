@@ -26,10 +26,12 @@
     "@types/c3": "^0.4.44",
     "@types/d3": "^4.10.0",
     "angular2-chartjs": "^0.3.0",
+    "angular2-highcharts": "^0.5.5",
     "c3": "^0.4.17",
     "chart.js": "^2.6.0",
     "core-js": "^2.4.1",
     "ng2-charts": "^1.6.0",
+    "require": "^2.4.20",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
