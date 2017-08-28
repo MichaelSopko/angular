@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import{chartData} from './charts-data';
+import{ chartData } from './charts-data';
 import * as _ from 'lodash';
 
 @Component({
@@ -44,52 +44,53 @@ export class InvestorRelationsComponent implements OnInit {
         }
       ]
     };
-    this.myCharts[2].options = {
-      legend: {
-        display: false
-      },
-      tooltips: {
-        backgroundColor: 'white',
-        bodyFontColor: 'black',
-        titleFontStyle: 'bold',
-        titleFontColor: 'black',
-        displayColors: false,
-      },
-      scales: {
-        yAxes: [{
-          stacked: true,
-          ticks: {
-            max: 0.4,
-            min: 0,
-            stepSize: 0.1
-          },
+    this.myCharts[2].options = _.cloneDeep(this.options);
+    this.myCharts[2].options.chart.type = 'column';
+    this.myCharts[2].options.chart.backgroundColor = '#424c4e';
+    this.myCharts[2].options.xAxis.categories = chartData['RETURN ON EQUITY'].categories;
+    this.myCharts[2].options.series[0].name = chartData['RETURN ON EQUITY'].label;
+    this.myCharts[2].options.series[0].data = chartData['RETURN ON EQUITY'].data;
+    this.myCharts[2].options.tooltips = {
+      backgroundColor: 'white',
+      bodyFontColor: 'black',
+      titleFontStyle: 'bold',
+      titleFontColor: 'black',
+      displayColors: false,
+    };
+    this.myCharts[2].options.scales = {
+      yAxes: [{
+        stacked: true,
+        ticks: {
+          max: 0.4,
+          min: 0,
+          stepSize: 0.1
+        },
+        display: false,
+        gridLines: {
           display: false,
-          gridLines: {
-            display: false,
-            color: 'rgba(255,99,132,0.2)'
-          }
-        }],
-        xAxes: [{
-          ticks: {
-            autoSkip: false,
-            maxRotation: 45,
-            minRotation: 45,
-            fontColor: '#fff'
-          },
-          gridLines: {
-            displayOnChartArea: false,
-            drawOnChartArea: false,
-            offsetGridLines: true,
-            color: '#fff',
-            zeroLineColor: '#fff',
-            drawBorder: true,
-            drawTicks: true,
-            tickMarkLength: 10
-          },
+          color: 'rgba(255,99,132,0.2)'
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          autoSkip: false,
+          maxRotation: 45,
+          minRotation: 45,
+          fontColor: '#fff'
+        },
+        gridLines: {
+          displayOnChartArea: false,
+          drawOnChartArea: false,
+          offsetGridLines: true,
+          color: '#fff',
+          zeroLineColor: '#fff',
+          drawBorder: true,
+          drawTicks: true,
+          tickMarkLength: 10
+        },
 
-        }]
-      }
-    }
+      }]
+    };
 
     this.myCharts[3] = {};
     this.myCharts[3].type = 'line';
@@ -117,7 +118,12 @@ export class InvestorRelationsComponent implements OnInit {
         }
       ]
     };
-    this.myCharts[3].options = chartData['options'];
+    this.myCharts[3].options = _.cloneDeep(this.options);
+    this.myCharts[3].options.chart.type = 'line';
+    this.myCharts[3].options.chart.backgroundColor = '#424c4e';
+    this.myCharts[3].options.xAxis.categories = chartData['RETURN ON EQUITY'].categories;
+    this.myCharts[3].options.series[0].name = chartData['RETURN ON EQUITY'].label;
+    this.myCharts[3].options.series[0].data = chartData['RETURN ON EQUITY'].data;
 
     this.myCharts[4] = {};
     this.myCharts[4].type = 'line';

@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
 
 
 import {AppComponent} from './app.component';
@@ -49,7 +49,7 @@ export function highchartsFactory() {
         redirectTo: 'fin-perf',
         pathMatch: 'full'
       },
-     {path: 'fin-perf', component: FinancialPerformanceComponent},
+      {path: 'fin-perf', component: FinancialPerformanceComponent},
       {path: 'fin-over', component: FinancialOverviewComponent},
       {path: 'inv-rel', component: InvestorRelationsComponent},
       {path: 'menegment-kpi', component: MenegmentKpiComponent},
