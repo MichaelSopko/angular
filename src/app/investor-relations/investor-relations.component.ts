@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import{chartData} from './charts-data';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-investor-relations',
@@ -8,27 +9,23 @@ import{chartData} from './charts-data';
 })
 export class InvestorRelationsComponent implements OnInit {
   myCharts = [];
+  options = {};
 
 
   constructor() {
 
+    this.options = chartData['options'];
+
     this.myCharts[1] = {};
-    this.myCharts[1].type = 'bar';
     this.myCharts[1].title = chartData['RETURN ON ASSETS'].title;
     this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
-    this.myCharts[1].data = {
-      labels: chartData['RETURN ON ASSETS'].labels,
-      datasets: [
-        {
-          label: chartData['RETURN ON ASSETS'].label,
-          backgroundColor: '#fff',
-          textColor: '#fff',
-          data: chartData['RETURN ON ASSETS'].data
-        }
-      ]
-    };
 
-    this.myCharts[1].options = chartData['options'];
+    this.myCharts[1].options =  _.cloneDeep(this.options);
+    this.myCharts[1].options.chart.type = 'column';
+    this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
+    this.myCharts[1].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
+    this.myCharts[1].options.series[0].data =  chartData['RETURN ON ASSETS'].data;
+
 
 
     this.myCharts[2] = {};

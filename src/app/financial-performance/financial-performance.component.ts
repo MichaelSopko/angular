@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import{chartData} from './charts-data';
-import { Map } from 'immutable';
 import * as _ from 'lodash';
 
 @Component({
