@@ -3,8 +3,8 @@ import {NgModule} from '@angular/core';
 import {ChartModule} from 'angular2-chartjs';
 import {RouterModule} from "@angular/router";
 
-import { ChartModule as HightChartModule } from 'angular2-highcharts';
-import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
+//import { ChartModule as HightChartModule } from 'angular2-highcharts';
+//import {HighchartsStatic} from 'angular2-highcharts/dist/HighchartsService';
 import Chart from 'chart.js';
 import * as  c3 from 'c3';
 
@@ -16,11 +16,13 @@ import { SalesConversionComponent } from './sales-conversion/sales-conversion.co
 import { FinancialOverviewComponent } from './financial-overview/financial-overview.component';
 import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
 
-import * as highcharts from 'highcharts';
+import { HightChartModule } from './lead-conversion/high-charts.module';
+
+/*import * as highcharts from 'highcharts';
 
 export function highchartsFactory() {
   return highcharts;
-}
+}*/
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ export function highchartsFactory() {
   imports: [
     BrowserModule,
     ChartModule,
-   // HightChartModule,
+    HightChartModule,
+
     RouterModule.forRoot([
       {
         path: '',
@@ -46,15 +49,13 @@ export function highchartsFactory() {
       {path: 'fin-perf', component: FinancialPerformanceComponent},
       {path: 'inv-rel', component: InvestorRelationsComponent},
       {path: 'menegment-kpi', component: MenegmentKpiComponent},
+      {path: 'sales-conv', component: SalesConversionComponent},
     ])
   ],
   exports: [
     RouterModule
   ],
-  providers: [ChartModule, FinancialPerformanceComponent/*, {
-    provide: HighchartsStatic,
-    useFactory: highchartsFactory
-  }*/],
+  providers: [FinancialPerformanceComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
