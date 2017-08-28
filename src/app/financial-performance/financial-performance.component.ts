@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import{chartData} from './charts-data';
-import { Map } from "immutable";
+import { Map } from 'immutable';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-financial-performance',
@@ -22,24 +23,24 @@ export class FinancialPerformanceComponent implements OnInit {
     this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
 
-    // this.myCharts[1].options = Map({}).mergeDeep(this.options).toObject();
-    this.myCharts[1].options =  this.options;
+    //this.myCharts[1].options = Map({}).mergeDeep(this.options).toObject();
+    this.myCharts[1].options =  _.cloneDeep(this.options);
     this.myCharts[1].options.chart.type = 'column';
     this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
     this.myCharts[1].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
     this.myCharts[1].options.series[0].data =  chartData['RETURN ON ASSETS'].data;
 
 
-   /* this.myCharts[2] = {};
+    this.myCharts[2] = {};
     this.myCharts[2].title = chartData['WORKING CAPITAL RATIO'].title;
     this.myCharts[2].circleTitleData = chartData['WORKING CAPITAL RATIO'].circleTitleData;
 
 
-    this.myCharts[2].options = chartData['options'];
+    this.myCharts[2].options = _.cloneDeep(this.options);
     this.myCharts[2].options.chart.type = 'line';
     this.myCharts[2].options.xAxis.categories =  chartData['WORKING CAPITAL RATIO'].categories;
     this.myCharts[2].options.series[0].name =  chartData['WORKING CAPITAL RATIO'].label;
-    this.myCharts[2].options.series[0].data =  chartData['WORKING CAPITAL RATIO'].data;*/
+    this.myCharts[2].options.series[0].data =  chartData['WORKING CAPITAL RATIO'].data;
 
 
     this.myCharts[3] = {};
@@ -67,7 +68,7 @@ export class FinancialPerformanceComponent implements OnInit {
         }
       ]
     };
-    this.myCharts[3].options = chartData['options'];
+    this.myCharts[3].options = _.cloneDeep(this.options);;
 
     this.myCharts[4] = {};
     this.myCharts[4].type = 'line';
@@ -94,7 +95,7 @@ export class FinancialPerformanceComponent implements OnInit {
         }
       ]
     };
-    this.myCharts[4].options = chartData['options'];
+    this.myCharts[4].options = _.cloneDeep(this.options);
 
 
 
