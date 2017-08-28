@@ -10,30 +10,67 @@
   background-color: #377991
 }
 
-.fp-item {
-  width:500px;
+.background-lemonchiffon {
+  background-color: #999488;
+}
 
+.background-lightblue {
+  background-color: #A1CAD0;
+}
 
-  .header {
-    color: white;text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding-top: 1em;
-  }
+.background-navajowhite {
+  background-color: #D1B596;
+}
 
-  .circle-title {
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
+.investor-relations-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
 
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: proxima_nova_rgregular, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 3em;
-    margin-top: 25px;
-    margin-bottom: 25px;
+  .ir-item {
+    width: 33.33333%;
+    
+    .ir-inner {
+      margin: 1rem;
+      padding: 2rem;
+    }
+
+    .header {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      line-height: 40px;
+    }
+
+    .title {
+      line-height: 100px;
+      margin: auto;
+
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-weight: normal;
+      font-style: normal;
+      font-size: 4.4rem;
+    }
   }
 }
+
+@media (max-width: 1800px) {
+  .investor-relations-wrapper {
+
+    .ir-item {
+      
+      .header {
+        font-size: 1.8rem;
+        line-height: 23px;
+      }
+      
+      .title {
+        font-size: 2.3rem;
+        line-height: 70px;
+      }
+    }
+  } 
+}
+  
