@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sales-conversion',
-  templateUrl: './sales-conversion.component.html',
-  styleUrls: ['./sales-conversion.component.scss']
+  selector: 'app-high-chart',
+  templateUrl: './high-chart.component.html',
+  styleUrls: ['./high-chart.component.scss']
 })
-export class SalesConversionComponent implements OnInit {
+export class HighChartComponent implements OnInit {
+  options: any;
   constructor() {
     this.options = {
       title : { text : 'simple chart' },
@@ -13,10 +14,8 @@ export class SalesConversionComponent implements OnInit {
         data: [29.9, 71.5, 106.4, 129.2],
       }]
     };
+
   }
-  options: Object;
-
-
 
   ngOnInit() {
   }
