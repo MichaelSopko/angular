@@ -269,9 +269,12 @@ input[type="search"]:-ms-input-placeholder      {color:#fff;}
 
 .main-content {
   margin-top: 6rem;
-  margin-left: 22rem;
   padding: 1rem;
   transition: all .4s ease-in-out 0s;
+}
+
+.main-content.with-sidebar {
+  margin-left: 22rem;
 }
 
 .content-wrapper {
