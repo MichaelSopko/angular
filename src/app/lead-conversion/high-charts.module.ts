@@ -22,10 +22,10 @@ import { HighChartComponent } from './high-chart.component';
     HighChartComponent
   ],
   providers: [
-    {
-      provide: HighchartsStatic,
-      useFactory: highchartsFactory
-    }
+  {
+    provide: HighchartsStatic,
+    useFactory: highchartsFactory
+  }
   ]
 })
 export class HightChartModule { }

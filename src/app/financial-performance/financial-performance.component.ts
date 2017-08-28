@@ -15,25 +15,15 @@ export class FinancialPerformanceComponent implements OnInit {
   constructor() {
 
     this.myCharts[1] = {};
-    this.myCharts[1].type = 'bar';
     this.myCharts[1].title = chartData['RETURN ON ASSETS'].title;
     this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
-    this.myCharts[1].data = {
-      labels: chartData['RETURN ON ASSETS'].labels,
-      datasets: [
-        {
-          label: chartData['RETURN ON ASSETS'].label,
-          backgroundColor: '#1da381',
-          borderColor: '#1da381',
-          borderWidth: 2,
-          hoverBackgroundColor: '#72cebf',
-          hoverBorderColor: '#72cebf',
-          data: chartData['RETURN ON ASSETS'].data
-        }
-      ]
-    };
+
 
     this.myCharts[1].options = chartData['options'];
+    this.myCharts[1].options.chart.type = 'column';
+    this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
+    this.myCharts[1].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
+    this.myCharts[1].options.series[0].data =  chartData['RETURN ON ASSETS'].data;
 
 
     this.myCharts[2] = {};
