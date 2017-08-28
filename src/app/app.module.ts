@@ -17,6 +17,7 @@ import { FinancialOverviewComponent } from './financial-overview/financial-overv
 import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
 
 import * as highcharts from 'highcharts';
+import {SalesPerformanceComponent} from './sales-performance/sales-performance.component';
 
 export function highchartsFactory() {
   return highcharts;
@@ -29,6 +30,7 @@ export function highchartsFactory() {
     InvestorRelationsComponent,
     SalesCycleComponent,
     SalesConversionComponent,
+    SalesPerformanceComponent,
     FinancialOverviewComponent,
     MenegmentKpiComponent,
   ],
@@ -44,8 +46,12 @@ export function highchartsFactory() {
       },
       {path: 'home', component: FinancialPerformanceComponent},
       {path: 'fin-perf', component: FinancialPerformanceComponent},
+      {path: 'fin-over', component: FinancialOverviewComponent},
       {path: 'inv-rel', component: InvestorRelationsComponent},
       {path: 'menegment-kpi', component: MenegmentKpiComponent},
+      {path: 'sales-cycle', component: SalesCycleComponent},
+      {path: 'sales-conv', component: SalesConversionComponent},
+      {path: 'sales-perf', component: SalesPerformanceComponent},
     ])
   ],
   exports: [
