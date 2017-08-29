@@ -1,10 +1,10 @@
 export const chartData: any =
   {
     'RETURN ON ASSETS': {
-      title: 'RETURN ON ASSETS',
+      title: 'CAC vs Customer Lifetime Value (CLV)',
       label: 'RoA',
       circleTitleData: '17%',
-      categories: ['Q2 2014', 'Q4 2015'],
+      categories: ['CAC', 'CLV'],
       data: [0.2, 0.77]
     },
     options: {
@@ -21,7 +21,7 @@ export const chartData: any =
         tickColor: 'white',
         labels: {
           style: {
-            color: 'white'
+            color: 'black'
           }
         }
 
@@ -54,13 +54,12 @@ export const chartData: any =
       },
 
 
-    /*  legend: {
+      legend: {
         enabled: false
       },
-*/
+
       series: [{
-        name: 'RoA',
-        data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
+
       }]
     }
   };
