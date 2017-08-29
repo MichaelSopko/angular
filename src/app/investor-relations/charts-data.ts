@@ -17,9 +17,9 @@ export const chartData: any =
     'SHARE PRICE': {
       title: 'SHARE PRICE',
       label: 'SP',
-      circleTitleData: '188 $',
+      circleTitleData: '188 €',
       categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
-      data: ['$122', '$138', '$145', '$160', '$180', '$185', '$190']
+      data: [122, 138, 145, 160, 180, 185, 188]
     },
     'WORKING CAPITAL RATIO': {
       title: 'WORKING CAPITAL RATIO',
@@ -34,6 +34,13 @@ export const chartData: any =
       label: 'DebtEquityRatio',
       categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [0.5, 0.4, 0.37, 0.48, 0.45, 0.54, 0.32]
+    },
+    'P/E Ratio': {
+      title: 'P/E Ratio',
+      circleTitleData: '37,2',
+      label: 'DebtEquityRatio',
+      categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
+      data: [47.4, 45.3, 43.4, 40.1, 40.2, 38.2, 37.2]
     },
     'options': {
       chart: {

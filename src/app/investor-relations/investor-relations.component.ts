@@ -19,13 +19,11 @@ export class InvestorRelationsComponent implements OnInit {
     this.myCharts[1].title = chartData['RETURN ON ASSETS'].title;
     this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
-    this.myCharts[1].options =  _.cloneDeep(this.options);
+    this.myCharts[1].options = _.cloneDeep(this.options);
     this.myCharts[1].options.chart.type = 'column';
     this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
     this.myCharts[1].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
     this.myCharts[1].options.series[0].data =  chartData['RETURN ON ASSETS'].data;
-
-
 
     this.myCharts[2] = {};
     this.myCharts[2].type = 'bar';
@@ -152,36 +150,85 @@ export class InvestorRelationsComponent implements OnInit {
     };
     this.myCharts[4].options = _.cloneDeep(this.options);
     this.myCharts[4].options.chart.type = 'column';
-    this.myCharts[4].options.chart.backgroundColor = '#424c4e';
+    this.myCharts[4].options.chart.backgroundColor = '#999488';
     this.myCharts[4].options.xAxis.categories = chartData['SHARE PRICE'].categories;
     this.myCharts[4].options.series[0].name = chartData['SHARE PRICE'].label;
     this.myCharts[4].options.series[0].data = chartData['SHARE PRICE'].data;
+    this.myCharts[4].options.plotOptions.series.dataLabels = {
+      style: {
+        fontWeight: 'bold',
+        color: 'white',
+        textOutline: 'none'
+      },
+      enabled: true,
+      format: '€{y}'
+    };
 
+    this.myCharts[5] = {};
+    this.myCharts[5].type = 'area';
+    this.myCharts[5].title = chartData['P/E Ratio'].title;
+    this.myCharts[5].circleTitleData = chartData['P/E Ratio'].circleTitleData;
+    this.myCharts[5].data = {
+      labels: chartData['P/E Ratio'].labels,
+      datasets: [
+        {
+          label: chartData['P/E Ratio'].label,
+          lineTension: 0,
+          textColor: '#fff',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: '#fff',
+          pointBackgroundColor: '#fff',
+          pointHitRadius: 12,
+          pointStyle: 'rect',
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
+          pointHoverBorderWidth: 4,
 
-    this.myCharts.forEach((chart) => {
-      chart.options.animation = {
-        // onComplete: drawNumbers,
-        onProgress: drawNumbers
-      }
-    });
-
-    function drawNumbers() {
-      var ctx = this.chart.ctx;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'bottom';
-
-      this.chart.config.data.datasets.forEach(function (dataset) {
-        ctx.fillStyle = dataset.textColor;
-        ctx.fontWeight = 'aasas';
-
-        for (var i = 0; i < dataset.data.length; i++) {
-          var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
-          var scaleMax = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
-          var yPos = (scaleMax - model.y) / scaleMax >= 0.93 ? model.y + 20 : model.y - 5;
-          ctx.fillText(dataset.data[i], model.x, yPos);
+          data: chartData['P/E Ratio'].data
         }
-      });
-    }
+      ]
+    };
+    this.myCharts[5].options = _.cloneDeep(this.options);
+    this.myCharts[5].options.chart.type = 'area';
+    this.myCharts[5].options.chart.backgroundColor = '#A1CAD0';
+    this.myCharts[5].options.xAxis.categories = chartData['P/E Ratio'].categories;
+    this.myCharts[5].options.series[0].name = chartData['P/E Ratio'].label;
+    this.myCharts[5].options.series[0].data = chartData['P/E Ratio'].data;
+
+    this.myCharts[6] = {};
+    this.myCharts[6].type = 'area';
+    this.myCharts[6].title = chartData['WORKING CAPITAL RATIO'].title;
+    this.myCharts[6].circleTitleData = chartData['WORKING CAPITAL RATIO'].circleTitleData;
+    this.myCharts[6].data = {
+      labels: chartData['WORKING CAPITAL RATIO'].labels,
+      datasets: [
+        {
+          label: chartData['WORKING CAPITAL RATIO'].label,
+          lineTension: 0,
+          textColor: '#fff',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: '#fff',
+          pointBackgroundColor: '#fff',
+          pointHitRadius: 12,
+          pointStyle: 'rect',
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
+          pointHoverBorderWidth: 4,
+
+          data: chartData['WORKING CAPITAL RATIO'].data
+        }
+      ]
+    };
+    this.myCharts[6].options = _.cloneDeep(this.options);
+    this.myCharts[6].options.chart.type = 'area';
+    this.myCharts[6].options.chart.backgroundColor = '#D1B596';
+    this.myCharts[6].options.xAxis.categories = chartData['WORKING CAPITAL RATIO'].categories;
+    this.myCharts[6].options.series[0].name = chartData['WORKING CAPITAL RATIO'].label;
+    this.myCharts[6].options.series[0].data = chartData['WORKING CAPITAL RATIO'].data;
   }
 
   ngOnInit() {
