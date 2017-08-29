@@ -13,7 +13,6 @@ export class InvestorRelationsComponent implements OnInit {
 
 
   constructor() {
-
     this.options = chartData['options'];
 
     this.myCharts[1] = {};
@@ -93,50 +92,17 @@ export class InvestorRelationsComponent implements OnInit {
     };
 
     this.myCharts[3] = {};
-    this.myCharts[3].type = 'line';
-    this.myCharts[3].title = chartData['RETURN ON EQUITY'].title;
-    this.myCharts[3].circleTitleData = chartData['RETURN ON EQUITY'].circleTitleData;
+    this.myCharts[3].type = 'area';
+    this.myCharts[3].title = chartData['DEBT-EQUITY RATIO'].title;
+    this.myCharts[3].circleTitleData = chartData['DEBT-EQUITY RATIO'].circleTitleData;
     this.myCharts[3].data = {
-      labels: chartData['RETURN ON EQUITY'].labels,
-      datasets: [
-        {
-          label: chartData['RETURN ON EQUITY'].label,
-          lineTension: 0,
-          textColor: '#fff',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderColor: '#fff',
-          pointBackgroundColor: '#fff',
-          pointHitRadius: 12,
-          pointStyle: 'rect',
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
-          pointHoverBorderWidth: 4,
-
-          data: chartData['RETURN ON EQUITY'].data
-        }
-      ]
-    };
-    this.myCharts[3].options = _.cloneDeep(this.options);
-    this.myCharts[3].options.chart.type = 'line';
-    this.myCharts[3].options.chart.backgroundColor = '#424c4e';
-    this.myCharts[3].options.xAxis.categories = chartData['RETURN ON EQUITY'].categories;
-    this.myCharts[3].options.series[0].name = chartData['RETURN ON EQUITY'].label;
-    this.myCharts[3].options.series[0].data = chartData['RETURN ON EQUITY'].data;
-
-    this.myCharts[4] = {};
-    this.myCharts[4].type = 'line';
-    this.myCharts[4].title = chartData['DEBT-EQUITY RATIO'].title;
-    this.myCharts[4].circleTitleData = chartData['DEBT-EQUITY RATIO'].circleTitleData;
-    this.myCharts[4].data = {
       labels: chartData['DEBT-EQUITY RATIO'].labels,
       datasets: [
         {
           label: chartData['DEBT-EQUITY RATIO'].label,
-          textColor: '#fff',
           lineTension: 0,
-          backgroundColor: '#cddde3',
+          textColor: '#fff',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
           borderColor: '#fff',
           pointBackgroundColor: '#fff',
           pointHitRadius: 12,
@@ -151,7 +117,46 @@ export class InvestorRelationsComponent implements OnInit {
         }
       ]
     };
-    this.myCharts[4].options = chartData['options'];
+    this.myCharts[3].options = _.cloneDeep(this.options);
+    this.myCharts[3].options.chart.type = 'area';
+    this.myCharts[3].options.chart.backgroundColor = '#377991';
+    this.myCharts[3].options.xAxis.categories = chartData['DEBT-EQUITY RATIO'].categories;
+    this.myCharts[3].options.series[0].name = chartData['DEBT-EQUITY RATIO'].label;
+    this.myCharts[3].options.series[0].data = chartData['DEBT-EQUITY RATIO'].data;
+
+    this.myCharts[4] = {};
+    this.myCharts[4].type = 'bar';
+    this.myCharts[4].title = chartData['SHARE PRICE'].title;
+    this.myCharts[4].circleTitleData = chartData['SHARE PRICE'].circleTitleData;
+    this.myCharts[4].data = {
+      labels: chartData['SHARE PRICE'].labels,
+      datasets: [
+        {
+          label: chartData['SHARE PRICE'].label,
+          textColor: '#fff',
+          lineTension: 0,
+          backgroundColor: '#cddde3',
+          borderColor: '#fff',
+          pointBackgroundColor: '#fff',
+          pointHitRadius: 12,
+          pointStyle: 'rect',
+          pointRadius: 4,
+          pointHoverRadius: 7,
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
+          pointHoverBorderWidth: 4,
+
+          data: chartData['SHARE PRICE'].data
+        }
+      ]
+    };
+    this.myCharts[4].options = _.cloneDeep(this.options);
+    this.myCharts[4].options.chart.type = 'column';
+    this.myCharts[4].options.chart.backgroundColor = '#424c4e';
+    this.myCharts[4].options.xAxis.categories = chartData['SHARE PRICE'].categories;
+    this.myCharts[4].options.series[0].name = chartData['SHARE PRICE'].label;
+    this.myCharts[4].options.series[0].data = chartData['SHARE PRICE'].data;
+
 
     this.myCharts.forEach((chart) => {
       chart.options.animation = {

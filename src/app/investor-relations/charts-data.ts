@@ -14,6 +14,13 @@ export const chartData: any =
       categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [0.26, 0.28, 0.29, 0.31, 0.31, 0.33, 0.34]
     },
+    'SHARE PRICE': {
+      title: 'SHARE PRICE',
+      label: 'SP',
+      circleTitleData: '188 $',
+      categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
+      data: ['$122', '$138', '$145', '$160', '$180', '$185', '$190']
+    },
     'WORKING CAPITAL RATIO': {
       title: 'WORKING CAPITAL RATIO',
       label: 'WCR',
