@@ -66,6 +66,12 @@ input[type="search"]::-moz-placeholder          {color:#fff;}
 input[type="search"]:-moz-placeholder           {color:#fff;}
 input[type="search"]:-ms-input-placeholder      {color:#fff;}
 
+chart {
+  display: block;
+  width: 100%;
+  height: 30rem;
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -164,7 +170,7 @@ input[type="search"]:-ms-input-placeholder      {color:#fff;}
   width: 22rem;
   background: #11c2a1;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  transition: all .4s ease-in-out 0s;
+  transition: all .4s ease 0s;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -270,7 +276,7 @@ input[type="search"]:-ms-input-placeholder      {color:#fff;}
 .main-content {
   margin-top: 6rem;
   padding: 1rem;
-  transition: all .4s ease-in-out 0s;
+  transition: all .4s ease 0s;
 }
 
 .main-content.with-sidebar {
