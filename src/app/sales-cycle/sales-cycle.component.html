@@ -1,3 +1,11 @@
-<p>
-  sales-cycle works!
-</p>
+<div class="ir-item">
+  <div class="ir-inner background-navajowhite">
+    <div class="header">
+      <span>{{myCharts[1]?.title}}</span>
+    </div>
+    <div class="title">
+      <span>{{myCharts[1]?.circleTitleData}}</span>
+    </div>
+    <chart [options]="myCharts[1]?.options"></chart>
+  </div>
+</div>
