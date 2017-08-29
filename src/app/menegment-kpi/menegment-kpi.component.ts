@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as c3 from 'c3';
-import { chartData } from './charts-data';
+import {chartData} from './charts-data';
 import * as _ from 'lodash';
 
 @Component({
@@ -12,7 +12,8 @@ export class MenegmentKpiComponent implements OnInit {
   myCharts = [];
   options = {};
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     const grid = {
@@ -155,95 +156,42 @@ export class MenegmentKpiComponent implements OnInit {
     this.myCharts[1].options.series[0].name = chartData['RETURN ON ASSETS'].label;
     this.myCharts[1].options.series[0].data = chartData['RETURN ON ASSETS'].data;
     this.myCharts[1].options.chart.events = {};
-    this.myCharts[1].options.plotOptions = {
-      series: {
-        cursor: 'pointer',
-          point: {
-          events: {
-            click: function() {
-              alert(this.y);
-            },
-            load: function () {
-              console.log(this);
-              // Draw the flow chart
-              var ren = this.renderer,
-                // colors = Highcharts.getOptions().colors,
-                rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5],
-                leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
 
 
-              // Arrow from Batik to SaaS client
-              ren.path(['M', 235, 185, 'L', 235, 155, 'C', 235, 130, 235, 130, 215, 130,
-                'L', 95, 130, 'L', 100, 125, 'M', 95, 130, 'L', 100, 135])
-                .attr({
-                  'stroke-width': 2,
-                  stroke: '#cb1c1f'
-                })
-                .add();
+    this.myCharts[1].options.chart.events.render = function ($event) {
 
-              ren.label('Rasterized image', 100, 110)
-                .css({
-                  color: '#cb201d',
-                  fontSize: '10px'
-                })
-                .add();
-
-            }
-          }
-        }
-      }
-    };
-    this.myCharts[1].options.chart.events.load = function () {
-      console.log(this);
       // Draw the flow chart
-      var ren = this.renderer,
-        // colors = Highcharts.getOptions().colors,
-        rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5],
-        leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
-
-
+      const target = $event.target;
+      const ren = target.renderer;
       // Arrow from Batik to SaaS client
-      ren.path(['M', 235, 185, 'L', 235, 155, 'C', 235, 130, 235, 130, 215, 130,
-        'L', 95, 130, 'L', 100, 125, 'M', 95, 130, 'L', 100, 135])
+      const x1 = target.chartWidth / 4;
+      const x2 = x1 + x1 + (2 / 8 * x1);
+      const y1 = 120;
+      const y2 = y1 - 30;
+      const y3 = y2 - 50;
+
+      if (target.myCustompath) {
+        target.myCustompath.element.remove();
+      }
+
+      if (target.myCustompathLabel) {
+        target.myCustompathLabel.element.remove();
+      }
+
+      target.myCustompath = ren.path(['M', x1, y1, 'L', x1, y2, 'C', x1, y3 - 20, x1, y3 - 20, x1 + 30, y3 - 20,
+        'L', x2, y3 - 20, 'L', x2 - 15, y3 - 20 - 5, 'M', x2, y3 - 20, 'L', x2 - 15, y3 - 20 + 5])
         .attr({
           'stroke-width': 2,
-          stroke: '#cb1c1f'
+          stroke: '#333'
         })
         .add();
 
-      ren.label('Rasterized image', 100, 110)
+      target.myCustompathLabel = ren.label('x9,6', x1 - 20, y1 + 20)
         .css({
-          color: '#cb201d',
-          fontSize: '10px'
+          color: '#333',
+          fontSize: '18px'
         })
         .add();
-
     };
-  }
-
-  onLoad($event) {
-    console.log($event);
-    // Draw the flow chart
-    const ren = $event.renderer;
-    // Arrow from Batik to SaaS client
-    const x1 = $event.chartWidth / 4;
-    const x2 = x1 + x1 + (2 / 8 * x1);
-    const y1 = 120;
-    const y2 = y1 - 30;
-    const y3 = y2 - 50;
-    ren.path(['M', x1, y1, 'L', x1, y2, 'C', x1, y3 - 20, x1, y3 - 20, x1 + 30, y3 - 20,
-      'L', x2, y3 - 20, 'L', x2 - 15, y3 - 20 - 5, 'M', x2, y3 - 20, 'L', x2 - 15, y3 - 20 + 5])
-      .attr({
-        'stroke-width': 2,
-        stroke: '#333'
-      })
-      .add();
-
-    ren.label('x9,6', x1 - 20, y1 + 20)
-      .css({
-        color: '#333',
-        fontSize: '18px'
-      })
-      .add();
   }
 }

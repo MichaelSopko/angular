@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import * as jQuery from 'jquery';
 
 import { AppComponent } from './app.component';
 import { FinancialPerformanceComponent } from './financial-performance/financial-performance.component';

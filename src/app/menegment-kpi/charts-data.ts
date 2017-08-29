@@ -10,7 +10,7 @@ export const chartData: any =
     options: {
       chart: {
         type: 'column',
-        backgroundColor: '#999',
+        backgroundColor: 'white',
       },
       title: {
         text: ''
@@ -36,7 +36,7 @@ export const chartData: any =
           dataLabels: {
             style: {
               fontWeight: 'bold',
-              color: 'white',
+              // color: 'white',
               textOutline: 'none'
             },
             enabled: true,
@@ -54,10 +54,10 @@ export const chartData: any =
       },
 
 
-      legend: {
+    /*  legend: {
         enabled: false
       },
-
+*/
       series: [{
         name: 'RoA',
         data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
