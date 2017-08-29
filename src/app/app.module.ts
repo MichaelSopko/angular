@@ -1,16 +1,18 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import * as jQuery from 'jquery';
 
-
-import {AppComponent} from './app.component';
-import {FinancialPerformanceComponent} from './financial-performance/financial-performance.component';
+import { AppComponent } from './app.component';
+import { FinancialPerformanceComponent } from './financial-performance/financial-performance.component';
 import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
 import { SalesCycleComponent } from './sales-cycle/sales-cycle.component';
 import { SalesConversionComponent } from './sales-conversion/sales-conversion.component';
 import { FinancialOverviewComponent } from './financial-overview/financial-overview.component';
 import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
-import {SalesPerformanceComponent} from './sales-performance/sales-performance.component';
+import { SalesPerformanceComponent } from './sales-performance/sales-performance.component';
+
+import { AppService } from './core/app.service';
 
 // import { HightChartModule } from './lead-conversion/high-charts.module';
 
@@ -61,7 +63,9 @@ export function highchartsFactory() {
   exports: [
     RouterModule
   ],
-  providers: [FinancialPerformanceComponent,
+  providers: [
+    FinancialPerformanceComponent,
+    AppService,
     {
       provide: HighchartsStatic,
       useFactory: highchartsFactory

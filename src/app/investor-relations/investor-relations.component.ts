@@ -1,6 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import{ chartData } from './charts-data';
+import { chartData } from './charts-data';
 import * as _ from 'lodash';
+import { AppService } from '../core/app.service';
+//import * as $ from 'jquery';
+
+//declare var $: any;
 
 @Component({
   selector: 'app-investor-relations',
@@ -10,9 +14,37 @@ import * as _ from 'lodash';
 export class InvestorRelationsComponent implements OnInit {
   myCharts = [];
   options = {};
+  sideBarIsVisible = true;
 
 
-  constructor() {
+  constructor(private _appService: AppService) {
+    this.drawCharts();
+  }
+
+  ngOnInit() {
+    /*this._appService.sideBarUpdated.subscribe(
+      () => {
+        this.sideBarIsVisible = this._appService.getSideBarVisible();
+        setTimeout(() => {
+          this.drawCharts();
+        }, 200);
+      }
+    );*/
+
+   /* window.addEventListener('resize', () =>{
+     this.drawCharts();
+     });*/
+   /* let el: any;
+    el = jQuery('app-investor-relations')[0];
+    jQuery(el).on('resize', () => {
+      this.drawCharts();
+    });*/
+     /*jQuery('main-content').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
+     this.drawCharts();
+     });*/
+  }
+
+  drawCharts() {
     this.options = chartData['options'];
 
     this.myCharts[1] = {};
@@ -229,9 +261,6 @@ export class InvestorRelationsComponent implements OnInit {
     this.myCharts[6].options.xAxis.categories = chartData['WORKING CAPITAL RATIO'].categories;
     this.myCharts[6].options.series[0].name = chartData['WORKING CAPITAL RATIO'].label;
     this.myCharts[6].options.series[0].data = chartData['WORKING CAPITAL RATIO'].data;
-  }
-
-  ngOnInit() {
   }
 
 }

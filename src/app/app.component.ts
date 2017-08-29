@@ -1,23 +1,19 @@
-import { Component, AfterViewInit } from '@angular/core';
-import * as  c3 from 'c3';
-import * as  d3 from 'd3';
+import { Component } from '@angular/core';
+import { AppService } from './core/app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   sideBarIsVisible = true;
 
-  constructor() {
-  }
-
-  ngAfterViewInit() {
-
+  constructor(private _appService: AppService) {
   }
 
   showSideBar() {
     this.sideBarIsVisible = !this.sideBarIsVisible;
+    this._appService.setSideBarVisible(this.sideBarIsVisible);
   }
 }

@@ -4,3 +4,12 @@
 <div class="revenue-chart"></div>
 <div class="new-customers-chart"></div>
 <div class="avg-revenue-chart"></div>
+
+<div class="ir-item">
+  <div class="ir-inner background-navajowhite">
+    <div class="header">
+      <span>{{myCharts[1]?.title}}</span>
+    </div>
+    <chart [options]="myCharts[1]?.options" (load)="onLoad($event.context)"></chart>
+  </div>
+</div>
