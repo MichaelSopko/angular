@@ -134,6 +134,107 @@ export const chartData: any = {
         data: [90.12, 80, 100.23, 120.24, 110.18, 105.17, 99.16, 97.17, 108, 112.55, 103.21, 122.78]
       }]
     }
+  },
+
+  'CUSTOMER LIFETIME VALUE': {
+    title: 'CUSTOMER LIFETIME VALUE',
+    options: {
+
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: ''
+      },
+
+      xAxis: {
+        visible: false,
+        categories: ['January 2016', 'February 2016', 'March 2016', 'April 2016', 'May 2016', 'June 2016', 'July 2016', 'August 2016', 'September 2016', 'October 2016', 'November 2016', 'December 2016'],
+      },
+
+      yAxis: {
+        visible: false
+      },
+
+      plotOptions: {
+        series: {
+          color: '#59b5a6',
+          dataLabels: {
+
+            enabled: true,
+            fontSize: '4px',
+            format: '€{point.y:.0f}',
+            style: {
+              fontWeight: 'lighter',
+              color: '#666666',
+              textOutline: 'none'
+            }
+          }
+        }
+      },
+
+      tooltip: {
+        headerFormat: '<b>{point.key}</b><br>',
+        pointFormat: '{series.name}:' + '<b>€{point.y}</b>',
+
+      },
+      series: [{
+        name: 'CLV',
+        data: [30, 70, 60, 120, 80, 130, 170, 98, 85, 150, 170, 60]
+      }]
+    }
+  },
+  'CUSTOMER ACQUISITION COST': {
+    title: 'CUSTOMER ACQUISITION COST',
+    options: {
+
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: ''
+      },
+
+      xAxis: {
+        visible: false,
+        categories: ['January 2016', 'February 2016', 'March 2016', 'April 2016', 'May 2016', 'June 2016', 'July 2016', 'August 2016', 'September 2016', 'October 2016', 'November 2016', 'December 2016'],
+      },
+
+      yAxis: {
+        visible: false
+      },
+
+      plotOptions: {
+        series: {
+          color: '#59b5a6',
+          dataLabels: {
+
+            enabled: true,
+            fontSize: '4px',
+            format: '€{point.y:.0f}',
+            style: {
+              fontWeight: 'lighter',
+              color: '#666666',
+              textOutline: 'none'
+            }
+          }
+        }
+      },
+
+      tooltip: {
+        headerFormat: '<b>{point.key}</b><br>',
+        pointFormat: '{series.name}:' + '<b>€{point.y}</b>',
+
+      },
+      series: [{
+        name: 'Acquisiton cost',
+        data: [340, 320, 307, 300, 337, 356, 345, 337, 326, 310, 294, 290],
+        marker: {
+          enabled: true,
+          symbol: 'square'
+        }
+      }]
+    }
   }
 };
 
