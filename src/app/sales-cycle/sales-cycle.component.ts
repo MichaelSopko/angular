@@ -22,7 +22,7 @@ export class SalesCycleComponent implements OnInit {
     this.myCharts[1].options.chart.type = 'line';
     this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
     this.myCharts[1].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
-    this.myCharts[1].options.series[0].data =  chartData['RETURN ON ASSETS'].data;
+    this.myCharts[1].options.series[0].data = [18.2, 18.2, 18.3, 18.3, 18.4, 18.5, 18.2, 18.3, 18.1];
 
     this.myCharts[2] = {};
     this.myCharts[2].title = chartData['RETURN ON ASSETS'].title;
@@ -114,6 +114,7 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[3] = {};
     this.myCharts[3].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[3].label = 'Lead-Conversion Ratio';
     this.myCharts[3].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[3].options = _.cloneDeep(this.options);
@@ -143,6 +144,7 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[4] = {};
     this.myCharts[4].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[4].label = 'Lead-Conversion Ratio';
     this.myCharts[4].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[4].options = _.cloneDeep(this.options);
@@ -172,6 +174,7 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[5] = {};
     this.myCharts[5].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[5].label = 'Lead-Conversion Ratio';
     this.myCharts[5].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[5].options = _.cloneDeep(this.options);
@@ -201,6 +204,7 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[6] = {};
     this.myCharts[6].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[6].label = 'Lead-Conversion Ratio';
     this.myCharts[6].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
     this.myCharts[6].options = {
       chart: {
