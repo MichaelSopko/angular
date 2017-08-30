@@ -111,6 +111,210 @@ export class SalesCycleComponent implements OnInit {
         });
       });
     };
+
+    this.myCharts[3] = {};
+    this.myCharts[3].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[3].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+
+    this.myCharts[3].options = _.cloneDeep(this.options);
+    this.myCharts[3].options.chart.type = 'line';
+    this.myCharts[3].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
+    this.myCharts[3].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
+    this.myCharts[3].options.series[0].data = [0.2, 0.5, 0.23, 0.34, 0.18, 0.27, 0.16, 0.17, 0.47];
+    this.myCharts[3].options.xAxis = {
+      visible: false
+    };
+    this.myCharts[3].options.plotOptions = {
+      series: {
+        color: '#54a2ae',
+        dataLabels: {
+          style: {
+            fontWeight: 'bold',
+            color: '#54a2ae',
+            textOutline: 'none'
+          },
+          enabled: false
+        },
+        marker: {
+          enabled: false
+        }
+      }
+    };
+
+    this.myCharts[4] = {};
+    this.myCharts[4].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[4].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+
+    this.myCharts[4].options = _.cloneDeep(this.options);
+    this.myCharts[4].options.chart.type = 'line';
+    this.myCharts[4].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
+    this.myCharts[4].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
+    this.myCharts[4].options.series[0].data = [0.2, 0.3, 0.33, 0.34, 0.38, 0.27, 0.26, 0.3, 0.3];
+    this.myCharts[4].options.xAxis = {
+      visible: false
+    };
+    this.myCharts[4].options.plotOptions = {
+      series: {
+        color: '#54a2ae',
+        dataLabels: {
+          style: {
+            fontWeight: 'bold',
+            color: '#54a2ae',
+            textOutline: 'none'
+          },
+          enabled: false
+        },
+        marker: {
+          enabled: false
+        }
+      }
+    };
+
+    this.myCharts[5] = {};
+    this.myCharts[5].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[5].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+
+    this.myCharts[5].options = _.cloneDeep(this.options);
+    this.myCharts[5].options.chart.type = 'line';
+    this.myCharts[5].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
+    this.myCharts[5].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
+    this.myCharts[5].options.series[0].data = [0.4, 0.23, 0.17, 0.34, 0.38, 0.37, 0.16, 0.57, 0.27];
+    this.myCharts[5].options.xAxis = {
+      visible: false
+    };
+    this.myCharts[5].options.plotOptions = {
+      series: {
+        color: '#54a2ae',
+        dataLabels: {
+          style: {
+            fontWeight: 'bold',
+            color: '#54a2ae',
+            textOutline: 'none'
+          },
+          enabled: false
+        },
+        marker: {
+          enabled: false
+        }
+      }
+    };
+
+    this.myCharts[6] = {};
+    this.myCharts[6].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[6].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+    this.myCharts[6].options = {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        visible: false
+      },
+      yAxis: {
+        visible: false
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        series: {
+          stacking: 'normal'
+        }
+      },
+      series: [{
+        name: 'John',
+        data: [5]
+      }, {
+        name: 'Jane',
+        data: [2]
+      }, {
+        name: 'Joe',
+        data: [3]
+      }, {
+        name: 'Joen',
+        data: [4]
+      }]
+    };
+
+    this.myCharts[7] = {};
+    this.myCharts[7].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[7].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+    this.myCharts[7].options = {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        visible: false
+      },
+      yAxis: {
+        visible: false
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        series: {
+          stacking: 'normal'
+        }
+      },
+      series: [{
+        name: 'John',
+        data: [5]
+      }, {
+        name: 'Jane',
+        data: [2]
+      }, {
+        name: 'Joe',
+        data: [3]
+      }, {
+        name: 'Joen',
+        data: [4]
+      }]
+    };
+
+    this.myCharts[8] = {};
+    this.myCharts[8].title = chartData['RETURN ON ASSETS'].title;
+    this.myCharts[8].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
+    this.myCharts[8].options = {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        visible: false
+      },
+      yAxis: {
+        visible: false
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        series: {
+          stacking: 'normal'
+        }
+      },
+      series: [{
+        name: 'John',
+        data: [5]
+      }, {
+        name: 'Jane',
+        data: [2]
+      }, {
+        name: 'Joe',
+        data: [3]
+      }, {
+        name: 'Joen',
+        data: [4]
+      }]
+    };
   }
 
   ngOnInit() {
