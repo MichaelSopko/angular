@@ -32,6 +32,14 @@ export class SalesPerformanceComponent implements OnInit {
     this.myCharts[5] = {};
     this.myCharts[5].title = chartData['CUSTOMER ACQUISITION COST'].title;
     this.myCharts[5].options = chartData['CUSTOMER ACQUISITION COST'].options;
+
+    this.myCharts[6] = {};
+    this.myCharts[6].title = chartData['AVERAGE WEEKLY SALES REVENUE'].title;
+    this.myCharts[6].options = chartData['AVERAGE WEEKLY SALES REVENUE'].options;
+
+    this.myCharts[7] = {};
+    this.myCharts[7].title = chartData['ABOVE SALES TARGET'].title;
+    this.myCharts[7].options = chartData['ABOVE SALES TARGET'].options;
   }
 
   ngOnInit() {
