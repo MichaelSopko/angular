@@ -1,18 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import{chartData} from './charts-data';
-
-@Component({
-  selector: 'app-financial-overview',
-  templateUrl: './financial-overview.component.html',
-  styleUrls: ['./financial-overview.component.scss']
-})
-export class FinancialOverviewComponent implements OnInit {
-  myCharts = [];
-
-  constructor() {
-    this.myCharts[1] = {};
-    this.myCharts[1].title = 'revenue';
-    this.myCharts[1].options = {
+export const chartData: any = {
+  'OPERATIONAL EXPENSES': {
+    title: 'OPERATIONAL EXPENSES',
+    options: {
       chart: {
         zoomType: 'xy'
       },
@@ -24,9 +13,8 @@ export class FinancialOverviewComponent implements OnInit {
           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       }],
       yAxis: [{
-        gridLineWidth: 0,
         min: 0,
-        tickInterval: 30,
+        minRange: 50,
         title: {
           text: ''
         },
@@ -34,8 +22,7 @@ export class FinancialOverviewComponent implements OnInit {
           format: '{value}',
         }
       }, {
-        min: 0,
-        tickInterval: 4,
+        gridLineWidth: 0,
         title: {
           text: ''
         },
@@ -84,14 +71,7 @@ export class FinancialOverviewComponent implements OnInit {
           valueSuffix: 'k'
         }
       }]
-    };
-
-    this.myCharts[2] = {};
-    this.myCharts[2].title = chartData['OPERATIONAL EXPENSES'].title;
-    this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
+    }
   }
+};
 
-  ngOnInit() {
-  }
-
-}
