@@ -111,6 +111,7 @@ export const chartData: any = {
         series: {
           color: '#59b5a6',
           dataLabels: {
+
             enabled: true,
             fontSize: '4px',
             format: '€{point.y:.0f}',
@@ -130,7 +131,7 @@ export const chartData: any = {
       },
       series: [{
         name: 'ARPU',
-        data: [90.12, 80, 100.23, 120.24, 110.18, 105.17, 99.16, 97.17, 108, 112.55, 103.21, 121.78]
+        data: [90.12, 80, 100.23, 120.24, 110.18, 105.17, 99.16, 97.17, 108, 112.55, 103.21, 122.78]
       }]
     }
   }
