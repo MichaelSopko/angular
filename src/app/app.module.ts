@@ -5,12 +5,12 @@ import {RouterModule} from "@angular/router";
 
 import {AppComponent} from './app.component';
 import {FinancialPerformanceComponent} from './financial-performance/financial-performance.component';
-/*import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
+import { InvestorRelationsComponent } from './investor-relations/investor-relations.component';
 import { SalesCycleComponent } from './sales-cycle/sales-cycle.component';
 import { SalesConversionComponent } from './sales-conversion/sales-conversion.component';
 import { FinancialOverviewComponent } from './financial-overview/financial-overview.component';
 import { MenegmentKpiComponent } from './menegment-kpi/menegment-kpi.component';
-import {SalesPerformanceComponent} from './sales-performance/sales-performance.component';*/
+import {SalesPerformanceComponent} from './sales-performance/sales-performance.component';
 
 // import { HightChartModule } from './lead-conversion/high-charts.module';
 
@@ -30,12 +30,12 @@ export function highchartsFactory() {
   declarations: [
     AppComponent,
     FinancialPerformanceComponent,
-  /*  InvestorRelationsComponent,
+    InvestorRelationsComponent,
     SalesCycleComponent,
     SalesConversionComponent,
     SalesPerformanceComponent,
     FinancialOverviewComponent,
-    MenegmentKpiComponent,*/
+    MenegmentKpiComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,17 +46,16 @@ export function highchartsFactory() {
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'fin-perf',
         pathMatch: 'full'
       },
-      {path: 'home', component: FinancialPerformanceComponent},
-     /* {path: 'fin-perf', component: FinancialPerformanceComponent},
+     {path: 'fin-perf', component: FinancialPerformanceComponent},
       {path: 'fin-over', component: FinancialOverviewComponent},
       {path: 'inv-rel', component: InvestorRelationsComponent},
       {path: 'menegment-kpi', component: MenegmentKpiComponent},
       {path: 'sales-cycle', component: SalesCycleComponent},
       {path: 'sales-perf', component: SalesPerformanceComponent},
-      {path: 'sales-conv', component: SalesConversionComponent},*/
+      {path: 'sales-conv', component: SalesConversionComponent},
     ])
   ],
   exports: [

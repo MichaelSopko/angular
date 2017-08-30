@@ -1,18 +1,137 @@
  path.domain, .tick {
   visibility: hidden !important;
 }
- :host .c3-xgrid-focus {
-   display: none;
- }
- :host .c3-grid .c3-xgrid-focus {
-   visibility : hidden !important;
- }
- .c3-event-rects { display: none }
- .c3-axis-y .tick {
-   display: none;
- }
-   .c3-xgrid-focus > line {
-     width: 0;
-   }
 
+:host .c3-xgrid-focus {
+  display: none;
+}
 
+:host .c3-grid .c3-xgrid-focus {
+  visibility : hidden !important;
+}
+
+.c3-event-rects { 
+  display: none 
+}
+
+.c3-axis-y .tick {
+  display: none;
+}
+
+.c3-xgrid-focus > line {
+  width: 0;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mk-item-wrap {
+  width: 50%;
+  margin: 0;
+  padding: 5px;
+
+  .mk-item {
+    height: 100%;
+    display: flex;
+    background-color: #F8F8F9;
+    
+    .aside-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      width: 35%;
+
+      table {
+        width: 100%;
+        height: 100%;
+
+        td {
+          padding: 0;
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        .bold {
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: bold;
+        }
+
+        .clarification {
+          font-size: 1rem;
+          text-align: start;
+          width: 20%;
+        }
+
+        .bold-clarification {
+          font-weight: bold;
+        }
+
+      }
+
+      .fa {
+        margin-right: 15px;
+        vertical-align: middle;
+        font-size: 30px;
+        font-weight: bold;
+        
+        &.fa-check-circle-o {
+          color: #63830C;
+        }
+
+        &.fa-exclamation-circle {
+          color: #AF3325;
+        } 
+      }
+    }
+
+    .chart-wrapper {
+      padding: 10px;
+      width: 65%;
+    }
+
+    h5 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+@media (min-width: 1800px) {
+
+  .mk-item-wrap {
+
+    .mk-item {
+
+      .aside-block {
+
+        table {
+
+          td {
+            font-size: 2rem;
+          }
+
+          .bold {
+            font-size: 4rem;
+          }
+
+          .clarification {
+            font-size: 1.5rem;
+          } 
+        } 
+
+        .fa {
+          font-size: 60px;
+        }
+
+        h5 {
+          font-size: normal;
+        }
+      }
+    }
+  }
+}
