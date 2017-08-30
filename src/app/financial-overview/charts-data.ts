@@ -3,74 +3,58 @@ export const chartData: any = {
     title: 'OPERATIONAL EXPENSES',
     options: {
       chart: {
-        zoomType: 'xy'
+        type: 'column'
       },
       title: {
         text: ''
       },
-      xAxis: [{
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      }],
-      yAxis: [{
+      xAxis: {
+        categories: ['January 2016', 'February 2016', 'March 2016', 'April 2016', 'May 2016', 'June 2016', 'July 2016', 'August 2016', 'September 2016', 'October 2016', 'November 2016', 'December 2016'],
+      },
+      yAxis: {
         min: 0,
-        minRange: 50,
+        max: 120,
+        tickAmount: 3,
         title: {
           text: ''
         },
+        // categories: ['€ 0k', '€ 50k', '€ 100k']
         labels: {
-          format: '{value}',
+          formatter: function () {
+            let label = this.axis.defaultLabelFormatter.call(this);
+            return '€' + label + 'k';
+          }
         }
-      }, {
-        gridLineWidth: 0,
-        title: {
-          text: ''
-        },
-        labels: {
-          format: '{value} %',
-        },
-        opposite: true
-      }],
+      },
       tooltip: {
+        useHTML: true,
+        headerFormat: '<b>{point.key}</b><br>',
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y}</b> </span><br/>',
         shared: true
       },
-      legend: {
-        layout: 'vertical',
-        align: 'left',
-        x: 80,
-        verticalAlign: 'top',
-        y: 55,
-        floating: true,
-        backgroundColor: '#FFFFFF'
+      plotOptions: {
+        column: {
+          stacking: 'normal'
+        }
       },
       series: [{
-        name: 'Growth',
-        type: 'column',
-        yAxis: 1,
-        data: [2.5, 2.5, 2.7, 2.7, 2.8, 2.8, 2.7, 2.8, 2.8, 2.8, 2.9, 2.9],
-        tooltip: {
-          valueSuffix: ' %'
-        }
+        name: 'General',
+        data: [15, 13, 14, 17, 12, 11, 10, 11, 12, 15, 13, 14],
+        color: '#83dcee'
       }, {
-        name: 'Target',
-        type: 'spline',
-        data: [57, 62, 65, 69, 72, 77, 80, 85, 88, 93, 96, 101],
-        marker: {
-          enabled: false
-        },
-        dashStyle: 'shortdot',
-        tooltip: {
-          valueSuffix: 'k'
-        }
-
+        name: 'Marketing',
+        data: [20, 22, 23, 22, 21, 19, 20, 21, 25, 27, 23, 24],
+        color: '#49d6be'
       }, {
-        name: 'Revenue',
-        type: 'spline',
-        data: [94, 96, 99, 101, 104, 107, 110, 113, 116, 119, 122, 126],
-        tooltip: {
-          valueSuffix: 'k'
-        }
-      }]
+        name: 'Sales',
+        data: [23, 27, 30, 32, 35, 35, 35, 35, 36, 45, 35, 32],
+        color: '#7be9a8',
+      },
+        {
+          name: 'IT',
+          data: [7, 9, 4, 12, 5, 7, 9, 4, 12, 10, 12, 9,],
+          color: '#51baed',
+        }]
     }
   }
 };
