@@ -31,7 +31,7 @@ export class FinancialOverviewComponent implements OnInit {
           text: ''
         },
         labels: {
-          format: '{value}',
+          format: '€{value}k',
         }
       }, {
         min: 0,
@@ -81,7 +81,8 @@ export class FinancialOverviewComponent implements OnInit {
         },
         dashStyle: 'shortdot',
         tooltip: {
-          valueSuffix: 'k'
+          valueSuffix: 'k',
+          valuePrefix: '€'
         }
 
       }, {
@@ -90,7 +91,8 @@ export class FinancialOverviewComponent implements OnInit {
         color: '#49b7ec',
         data: [94, 96, 99, 101, 104, 107, 110, 113, 116, 119, 122, 126],
         tooltip: {
-          valueSuffix: 'k'
+          valueSuffix: 'k',
+          valuePrefix: '€'
         }
       }]
     };
