@@ -20,9 +20,14 @@ import { ChartModule } from 'angular2-highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import * as highcharts from 'highcharts';
 const Hichartsfunnel = require('highcharts/modules/funnel');
+const HichartsMore = require('highcharts/highcharts-more');
+const HichartsGauge = require('highcharts/modules/solid-gauge');
+
 
 export function highchartsFactory() {
   Hichartsfunnel(highcharts);
+  HichartsMore(highcharts);
+  HichartsGauge(highcharts);
 
   return highcharts;
 }
