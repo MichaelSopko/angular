@@ -222,7 +222,21 @@ export class SalesCycleComponent implements OnInit {
       },
       plotOptions: {
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
@@ -262,7 +276,21 @@ export class SalesCycleComponent implements OnInit {
       },
       plotOptions: {
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
@@ -302,7 +330,21 @@ export class SalesCycleComponent implements OnInit {
       },
       plotOptions: {
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
