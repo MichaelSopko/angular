@@ -38,6 +38,9 @@ export class SalesCycleComponent implements OnInit {
         x: -50
       },
       plotOptions: {
+        funnel: {
+          colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa']
+        },
         series: {
           dataLabels: {
             enabled: true,
@@ -221,6 +224,9 @@ export class SalesCycleComponent implements OnInit {
         enabled: false
       },
       plotOptions: {
+        column: {
+          colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa'],
+        },
         series: {
           stacking: 'normal',
           dataLabels: {
@@ -240,15 +246,19 @@ export class SalesCycleComponent implements OnInit {
         }
       },
       series: [{
+        color: '#35aaae',
         name: 'Stage1',
         data: [3]
       }, {
+        color: '#ec8190',
         name: 'Stage2',
         data: [5]
       }, {
+        color: '#feb074',
         name: 'Stage3',
         data: [7]
       }, {
+        color: '#aaaaaa',
         name: 'Stage4',
         data: [3]
       }]
@@ -294,15 +304,19 @@ export class SalesCycleComponent implements OnInit {
         }
       },
       series: [{
+        color: '#35aaae',
         name: 'Stage1',
         data: [4]
       }, {
+        color: '#ec8190',
         name: 'Stage2',
         data: [4]
       }, {
+        color: '#feb074',
         name: 'Stage3',
         data: [10]
       }, {
+        color: '#aaaaaa',
         name: 'Stage4',
         data: [7]
       }]
@@ -348,15 +362,19 @@ export class SalesCycleComponent implements OnInit {
         }
       },
       series: [{
+        color: '#35aaae',
         name: 'Stage1',
         data: [3]
       }, {
+        color: '#ec8190',
         name: 'Stage2',
         data: [3]
       }, {
+        color: '#feb074',
         name: 'Stage3',
         data: [4]
       }, {
+        color: '#aaaaaa',
         name: 'Stage4',
         data: [3]
       }]

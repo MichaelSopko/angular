@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{chartData} from './charts-data';
+import { chartData } from './charts-data';
 
 @Component({
   selector: 'app-financial-overview',
@@ -20,20 +20,22 @@ export class FinancialOverviewComponent implements OnInit {
         text: ''
       },
       xAxis: [{
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Jan 16', 'Feb 16', 'Mar 16', 'Apr 16', 'May 16', 'Jun 16',
+          'Jul 16', 'Aug 16', 'Sep 16', 'Oct 16', 'Nov 16', 'Dec 16']
       }],
       yAxis: [{
+        gridLineWidth: 0,
         min: 0,
-        minRange: 50,
+        tickInterval: 30,
         title: {
           text: ''
         },
         labels: {
-          format: '{value}',
+          format: '€{value}k',
         }
       }, {
-        gridLineWidth: 0,
+        min: 0,
+        tickInterval: 4,
         title: {
           text: ''
         },
@@ -54,6 +56,13 @@ export class FinancialOverviewComponent implements OnInit {
         floating: true,
         backgroundColor: '#FFFFFF'
       },
+      plotOptions: {
+        series: {
+          marker: {
+            enabled: false
+          }
+        }
+      },
       series: [{
         name: 'Growth',
         type: 'column',
@@ -65,21 +74,25 @@ export class FinancialOverviewComponent implements OnInit {
       }, {
         name: 'Target',
         type: 'spline',
+        color: '#49d6be',
         data: [57, 62, 65, 69, 72, 77, 80, 85, 88, 93, 96, 101],
         marker: {
           enabled: false
         },
         dashStyle: 'shortdot',
         tooltip: {
-          valueSuffix: 'k'
+          valueSuffix: 'k',
+          valuePrefix: '€'
         }
 
       }, {
         name: 'Revenue',
         type: 'spline',
+        color: '#49b7ec',
         data: [94, 96, 99, 101, 104, 107, 110, 113, 116, 119, 122, 126],
         tooltip: {
-          valueSuffix: 'k'
+          valueSuffix: 'k',
+          valuePrefix: '€'
         }
       }]
     };
