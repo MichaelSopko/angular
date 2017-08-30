@@ -23,8 +23,9 @@ export class FinancialOverviewComponent implements OnInit {
           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       }],
       yAxis: [{
+        gridLineWidth: 0,
         min: 0,
-        minRange: 50,
+        tickInterval: 30,
         title: {
           text: ''
         },
@@ -32,7 +33,8 @@ export class FinancialOverviewComponent implements OnInit {
           format: '{value}',
         }
       }, {
-        gridLineWidth: 0,
+        min: 0,
+        tickInterval: 4,
         title: {
           text: ''
         },
