@@ -17,6 +17,12 @@
   }
 }
 
+ chart {
+  display: block;
+  height: 300px;
+  width: 100%;
+}
+
 .fp-item {
   padding: 1rem;
 
@@ -70,8 +76,8 @@
   }
 
   .chart {
-    width: 40%;
-    padding-left: 1rem;
+     width: 40%;
+     padding-left: 1rem;
   }
 
   .value {
@@ -127,7 +133,7 @@ chart {
     }
 
     .content {
-      padding: 2rem 4rem;
+      padding: 2rem;
     }
 
     .circle-title {

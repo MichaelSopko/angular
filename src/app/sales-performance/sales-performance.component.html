@@ -1,3 +1,74 @@
-<p>
-  sales-performance works!
-</p>
+<!-- TODO  Fix THIS with CSS. PLEASE -->
+<div  style="width: 600px; ">
+  <div class="">
+    <span>{{myCharts[3]?.title}}</span>
+  </div>
+  <div class="">
+
+
+    <chart [options]="myCharts[3]?.options"></chart>
+  </div>
+</div>
+
+<!-- TODO  Fix THIS with CSS. PLEASE -->
+<div style="width: 600px; ">
+  <div class="">
+    <span>{{myCharts[4]?.title}}</span>
+  </div>
+  <div class="">
+
+
+    <chart [options]="myCharts[4]?.options"></chart>
+  </div>
+</div>
+
+<!-- TODO  Fix THIS with CSS. PLEASE -->
+<div style="width: 600px; ">
+  <div class="">
+    <span>{{myCharts[5]?.title}}</span>
+  </div>
+  <div class="">
+
+
+    <chart [options]="myCharts[5]?.options"></chart>
+  </div>
+</div>
+
+<h2 class="content-title">SALES PERFORMANCE DASHBOARD</h2>
+
+<div class="content-wrapper">
+  <div class="left-side">
+  <div class="fp-item">
+
+    <div class="item-inner">
+      <div class="header">
+        <span>{{myCharts[1]?.title}}</span>
+      </div>
+      <div class="content">
+
+
+        <chart [options]="myCharts[1]?.options"></chart>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="left-side">
+    <div class="fp-item">
+
+      <div class="item-inner">
+        <div class="header">
+          <span>{{myCharts[2]?.title}}</span>
+        </div>
+        <div class="content">
+
+
+          <chart [options]="myCharts[2]?.options"></chart>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
