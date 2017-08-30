@@ -5,7 +5,9 @@
     "baseUrl": "./",
     "module": "es2015",
     "types": [
-      "c3"
+      "c3",
+      "node",
+      "require"
     ]
   },
   "exclude": [

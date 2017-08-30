@@ -200,28 +200,7 @@ export class InvestorRelationsComponent implements OnInit {
     this.myCharts[5].type = 'area';
     this.myCharts[5].title = chartData['P/E Ratio'].title;
     this.myCharts[5].circleTitleData = chartData['P/E Ratio'].circleTitleData;
-    this.myCharts[5].data = {
-      labels: chartData['P/E Ratio'].labels,
-      datasets: [
-        {
-          label: chartData['P/E Ratio'].label,
-          lineTension: 0,
-          textColor: '#fff',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-          borderColor: '#fff',
-          pointBackgroundColor: '#fff',
-          pointHitRadius: 12,
-          pointStyle: 'rect',
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(255,255,255,0.7)',
-          pointHoverBorderWidth: 4,
 
-          data: chartData['P/E Ratio'].data
-        }
-      ]
-    };
     this.myCharts[5].options = _.cloneDeep(this.options);
     this.myCharts[5].options.chart.type = 'area';
     this.myCharts[5].options.chart.backgroundColor = '#A1CAD0';
