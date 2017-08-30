@@ -19,10 +19,11 @@ import { AppService } from './core/app.service';
 import { ChartModule } from 'angular2-highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import * as highcharts from 'highcharts';
-
-
+const Hichartsfunnel = require('highcharts/modules/funnel');
 
 export function highchartsFactory() {
+  Hichartsfunnel(highcharts);
+
   return highcharts;
 }
 
@@ -68,7 +69,8 @@ export function highchartsFactory() {
     {
       provide: HighchartsStatic,
       useFactory: highchartsFactory
-    }],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

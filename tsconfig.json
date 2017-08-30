@@ -8,6 +8,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "paths": {
+      "fabric": [
+        "../node_modules/fabric/dist/fabric.require.js"
+      ]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
