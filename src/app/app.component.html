@@ -1,7 +1,7 @@
 <div class="wrapper">
   <header class="main-header">
     <div class="header-nav">
-      <a class="btn" href="javascript:;">
+      <a class="btn" href="javascript:;" (click)="showSideBar()">
         <span class="fa fa-bars"></span>
       </a>
       <form role="search" method="post">
@@ -37,7 +37,7 @@
       </ul>
     </div>
   </header>
-  <aside class="aside open">
+  <aside class="aside" [ngClass]="{'open': sideBarIsVisible}">
     <div class="profile-block">
       <div class="user-avatar">
         <img src="../assets/img/avatar.jpg" alt="image" class="avatar-img">
@@ -66,7 +66,7 @@
       </li>
     </ul>
   </aside>
-  <main class="main-content with-sidebar">
+  <main class="main-content"  [ngClass]="{'with-sidebar': sideBarIsVisible}" >
     <router-outlet></router-outlet>
   </main>
 

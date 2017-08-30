@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import{chartData} from './charts-data';
-import { Map } from 'immutable';
+import{ chartData } from './charts-data';
 import * as _ from 'lodash';
 
 @Component({
@@ -22,8 +21,6 @@ export class FinancialPerformanceComponent implements OnInit {
     this.myCharts[1].title = chartData['RETURN ON ASSETS'].title;
     this.myCharts[1].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
-
-    //this.myCharts[1].options = Map({}).mergeDeep(this.options).toObject();
     this.myCharts[1].options =  _.cloneDeep(this.options);
     this.myCharts[1].options.chart.type = 'column';
     this.myCharts[1].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
