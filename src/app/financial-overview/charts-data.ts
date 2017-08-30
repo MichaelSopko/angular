@@ -1,18 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import{chartData} from './charts-data';
-
-@Component({
-  selector: 'app-financial-overview',
-  templateUrl: './financial-overview.component.html',
-  styleUrls: ['./financial-overview.component.scss']
-})
-export class FinancialOverviewComponent implements OnInit {
-  myCharts = [];
-
-  constructor() {
-    this.myCharts[1] = {};
-    this.myCharts[1].title = 'revenue';
-    this.myCharts[1].options = {
+export const chartData: any = {
+  'OPERATIONAL EXPENSES': {
+    title: 'OPERATIONAL EXPENSES',
+    options: {
       chart: {
         zoomType: 'xy'
       },
@@ -82,14 +71,7 @@ export class FinancialOverviewComponent implements OnInit {
           valueSuffix: 'k'
         }
       }]
-    };
-
-    this.myCharts[2] = {};
-    this.myCharts[2].title = chartData['OPERATIONAL EXPENSES'].title;
-    this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
+    }
   }
+};
 
-  ngOnInit() {
-  }
-
-}
