@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { chartData } from './charts-data';
 import * as _ from 'lodash';
 import { AppService } from '../core/app.service';
-//import * as $ from 'jquery';
+
+import * as $ from 'jquery';
 
 //declare var $: any;
 
@@ -22,26 +23,13 @@ export class InvestorRelationsComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*this._appService.sideBarUpdated.subscribe(
+    this._appService.sideBarUpdated.subscribe(
       () => {
         this.sideBarIsVisible = this._appService.getSideBarVisible();
-        setTimeout(() => {
-          this.drawCharts();
-        }, 200);
+        window.dispatchEvent(new Event('resize'));
+        //this.drawCharts();
       }
-    );*/
-
-   /* window.addEventListener('resize', () =>{
-     this.drawCharts();
-     });*/
-   /* let el: any;
-    el = jQuery('app-investor-relations')[0];
-    jQuery(el).on('resize', () => {
-      this.drawCharts();
-    });*/
-     /*jQuery('main-content').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
-     this.drawCharts();
-     });*/
+    );
   }
 
   drawCharts() {

@@ -36,8 +36,7 @@ export class AppComponent {
   }
 
   animationDone() {
-
-   console.log(' Animation Done');
+    window.dispatchEvent(new Event('resize'));
   }
 
   constructor(private _appService: AppService) {
@@ -45,6 +44,6 @@ export class AppComponent {
 
   showSideBar() {
     this.sideBarIsVisible = !this.sideBarIsVisible;
-    this._appService.setSideBarVisible(this.sideBarIsVisible);
+
   }
 }
