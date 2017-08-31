@@ -3,11 +3,19 @@
 .top-section {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
   height: 400px;
-  background-color: #46E3DF;
+  background: linear-gradient(45deg, #46E4E0, #4EA7A3);
 
   .ytd-block {
-    width: 30%;
+     width: 20%;
+  }
+
+  .weekly-sales-chart {
+    width: 60%;
+  }
+
+  .circle-chart {
+    width: 20%;
+    
   }
 }
