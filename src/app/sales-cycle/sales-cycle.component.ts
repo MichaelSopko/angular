@@ -38,6 +38,9 @@ export class SalesCycleComponent implements OnInit {
         x: -50
       },
       plotOptions: {
+        funnel: {
+          colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa']
+        },
         series: {
           dataLabels: {
             enabled: true,
@@ -77,6 +80,7 @@ export class SalesCycleComponent implements OnInit {
       }]
     };
     this.myCharts[2].options.chart.events = {};
+    this.myCharts[2].options.tooltip = {enabled: false};
     this.myCharts[2].options.chart.events.render = function ($event) {
       console.log($event.target);
       // Draw the flow chart
@@ -114,16 +118,15 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[3] = {};
     this.myCharts[3].title = chartData['RETURN ON ASSETS'].title;
-    this.myCharts[3].label = 'Lead-Conversion Ratio';
     this.myCharts[3].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[3].options = _.cloneDeep(this.options);
     this.myCharts[3].options.chart.type = 'line';
-    this.myCharts[3].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
-    this.myCharts[3].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
-    this.myCharts[3].options.series[0].data = [0.2, 0.5, 0.23, 0.34, 0.18, 0.27, 0.16, 0.17, 0.47];
+    this.myCharts[3].options.series[0].name = 'Lead-Conversion Ratio';
+    this.myCharts[3].options.series[0].data = [9.3, 2.4, 1.2, 8.3, 2.8, 5.1, 2.4, 4.9, 4.2];
     this.myCharts[3].options.xAxis = {
-      visible: false
+      visible: false,
+      categories: chartData['RETURN ON ASSETS'].categories
     };
     this.myCharts[3].options.plotOptions = {
       series: {
@@ -144,16 +147,15 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[4] = {};
     this.myCharts[4].title = chartData['RETURN ON ASSETS'].title;
-    this.myCharts[4].label = 'Lead-Conversion Ratio';
     this.myCharts[4].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[4].options = _.cloneDeep(this.options);
     this.myCharts[4].options.chart.type = 'line';
-    this.myCharts[4].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
-    this.myCharts[4].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
-    this.myCharts[4].options.series[0].data = [0.2, 0.3, 0.33, 0.34, 0.38, 0.27, 0.26, 0.3, 0.3];
+    this.myCharts[4].options.series[0].name = 'Lead-Conversion Ratio';
+    this.myCharts[4].options.series[0].data = [8.3, 21.4, 7.1, 7.1, 10.7, 7.1, 7.1, 10.7, 0.0];
     this.myCharts[4].options.xAxis = {
-      visible: false
+      visible: false,
+      categories: chartData['RETURN ON ASSETS'].categories
     };
     this.myCharts[4].options.plotOptions = {
       series: {
@@ -174,16 +176,15 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[5] = {};
     this.myCharts[5].title = chartData['RETURN ON ASSETS'].title;
-    this.myCharts[5].label = 'Lead-Conversion Ratio';
     this.myCharts[5].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
 
     this.myCharts[5].options = _.cloneDeep(this.options);
     this.myCharts[5].options.chart.type = 'line';
-    this.myCharts[5].options.xAxis.categories =  chartData['RETURN ON ASSETS'].categories;
-    this.myCharts[5].options.series[0].name =  chartData['RETURN ON ASSETS'].label;
-    this.myCharts[5].options.series[0].data = [0.4, 0.23, 0.17, 0.34, 0.38, 0.37, 0.16, 0.57, 0.27];
+    this.myCharts[5].options.series[0].name = 'Lead-Conversion Ratio';
+    this.myCharts[5].options.series[0].data = [3.1, 7.1, 17.9, 24.2, 4.8, 5.4, 7.1, 5.4, 0.0];
     this.myCharts[5].options.xAxis = {
-      visible: false
+      visible: false,
+      categories: chartData['RETURN ON ASSETS'].categories
     };
     this.myCharts[5].options.plotOptions = {
       series: {
@@ -204,7 +205,6 @@ export class SalesCycleComponent implements OnInit {
 
     this.myCharts[6] = {};
     this.myCharts[6].title = chartData['RETURN ON ASSETS'].title;
-    this.myCharts[6].label = 'Lead-Conversion Ratio';
     this.myCharts[6].circleTitleData = chartData['RETURN ON ASSETS'].circleTitleData;
     this.myCharts[6].options = {
       chart: {
@@ -214,7 +214,8 @@ export class SalesCycleComponent implements OnInit {
         text: ''
       },
       xAxis: {
-        visible: false
+        visible: false,
+        categories: ['A']
       },
       yAxis: {
         visible: false
@@ -223,22 +224,43 @@ export class SalesCycleComponent implements OnInit {
         enabled: false
       },
       plotOptions: {
+        column: {
+          colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa'],
+        },
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
-        name: 'John',
-        data: [5]
-      }, {
-        name: 'Jane',
-        data: [2]
-      }, {
-        name: 'Joe',
+        color: '#35aaae',
+        name: 'Stage1',
         data: [3]
       }, {
-        name: 'Joen',
-        data: [4]
+        color: '#ec8190',
+        name: 'Stage2',
+        data: [5]
+      }, {
+        color: '#feb074',
+        name: 'Stage3',
+        data: [7]
+      }, {
+        color: '#aaaaaa',
+        name: 'Stage4',
+        data: [3]
       }]
     };
 
@@ -253,7 +275,8 @@ export class SalesCycleComponent implements OnInit {
         text: ''
       },
       xAxis: {
-        visible: false
+        visible: false,
+        categories: ['B']
       },
       yAxis: {
         visible: false
@@ -263,21 +286,39 @@ export class SalesCycleComponent implements OnInit {
       },
       plotOptions: {
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
-        name: 'John',
-        data: [5]
-      }, {
-        name: 'Jane',
-        data: [2]
-      }, {
-        name: 'Joe',
-        data: [3]
-      }, {
-        name: 'Joen',
+        color: '#35aaae',
+        name: 'Stage1',
         data: [4]
+      }, {
+        color: '#ec8190',
+        name: 'Stage2',
+        data: [4]
+      }, {
+        color: '#feb074',
+        name: 'Stage3',
+        data: [10]
+      }, {
+        color: '#aaaaaa',
+        name: 'Stage4',
+        data: [7]
       }]
     };
 
@@ -292,7 +333,8 @@ export class SalesCycleComponent implements OnInit {
         text: ''
       },
       xAxis: {
-        visible: false
+        visible: false,
+        categories: ['C']
       },
       yAxis: {
         visible: false
@@ -302,21 +344,39 @@ export class SalesCycleComponent implements OnInit {
       },
       plotOptions: {
         series: {
-          stacking: 'normal'
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            useHTML: true,
+            shadow: false,
+            verticalAlign: 'middle',
+            padding: 0,
+            align: 'center',
+            style:  {
+              fontSize: '14px',
+              fontWeight: 'normal',
+              'text-align': 'center'
+            },
+            color: 'white'
+          }
         }
       },
       series: [{
-        name: 'John',
-        data: [5]
-      }, {
-        name: 'Jane',
-        data: [2]
-      }, {
-        name: 'Joe',
+        color: '#35aaae',
+        name: 'Stage1',
         data: [3]
       }, {
-        name: 'Joen',
+        color: '#ec8190',
+        name: 'Stage2',
+        data: [3]
+      }, {
+        color: '#feb074',
+        name: 'Stage3',
         data: [4]
+      }, {
+        color: '#aaaaaa',
+        name: 'Stage4',
+        data: [3]
       }]
     };
   }

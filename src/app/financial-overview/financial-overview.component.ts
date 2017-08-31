@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { chartData } from './charts-data';
 
 @Component({
   selector: 'app-financial-overview',
@@ -6,8 +7,97 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./financial-overview.component.scss']
 })
 export class FinancialOverviewComponent implements OnInit {
+  myCharts = [];
 
-  constructor() { }
+  constructor() {
+    this.myCharts[1] = {};
+    this.myCharts[1].title = 'revenue';
+    this.myCharts[1].options = {
+      chart: {
+        zoomType: 'xy'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: [{
+        categories: ['Jan 16', 'Feb 16', 'Mar 16', 'Apr 16', 'May 16', 'Jun 16',
+          'Jul 16', 'Aug 16', 'Sep 16', 'Oct 16', 'Nov 16', 'Dec 16']
+      }],
+      yAxis: [{
+        gridLineWidth: 0,
+        min: 0,
+        tickInterval: 30,
+        title: {
+          text: ''
+        },
+        labels: {
+          format: '€{value}k',
+        }
+      }, {
+        min: 0,
+        tickInterval: 4,
+        title: {
+          text: ''
+        },
+        labels: {
+          format: '{value} %',
+        },
+        opposite: true
+      }],
+      tooltip: {
+        shared: true
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        backgroundColor: '#FFFFFF'
+      },
+      plotOptions: {
+        series: {
+          marker: {
+            enabled: false
+          }
+        }
+      },
+      series: [{
+        name: 'Growth',
+        type: 'column',
+        yAxis: 1,
+        data: [2.5, 2.5, 2.7, 2.7, 2.8, 2.8, 2.7, 2.8, 2.8, 2.8, 2.9, 2.9],
+        tooltip: {
+          valueSuffix: ' %'
+        }
+      }, {
+        name: 'Target',
+        type: 'spline',
+        color: '#49d6be',
+        data: [57, 62, 65, 69, 72, 77, 80, 85, 88, 93, 96, 101],
+        marker: {
+          enabled: false
+        },
+        dashStyle: 'shortdot',
+        tooltip: {
+          valueSuffix: 'k',
+          valuePrefix: '€'
+        }
+
+      }, {
+        name: 'Revenue',
+        type: 'spline',
+        color: '#49b7ec',
+        data: [94, 96, 99, 101, 104, 107, 110, 113, 116, 119, 122, 126],
+        tooltip: {
+          valueSuffix: 'k',
+          valuePrefix: '€'
+        }
+      }]
+    };
+
+    this.myCharts[2] = {};
+    this.myCharts[2].title = chartData['OPERATIONAL EXPENSES'].title;
+    this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
+  }
 
   ngOnInit() {
   }
