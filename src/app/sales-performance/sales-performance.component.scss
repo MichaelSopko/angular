@@ -1,139 +1,21 @@
-.left-side,
-.right-side {
+
+
+.top-section {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-}
+  height: 400px;
+  background: linear-gradient(45deg, #46E4E0, #4EA7A3);
 
-.left-side {
-  .fp-item {
-    width: 50%;
-  }
-}
-
-.right-side {
-  .fp-item {
-    width: 100%;
-  }
-}
-
-.fp-item {
-  padding: 1rem;
-
-  .header {
-    padding: .5rem 0;
-    background-color: #666;
-    color: white;
-    font-size: 1.8rem;
-    text-align: center;
-    text-transform: uppercase;
+  .ytd-block {
+     width: 20%;
   }
 
-  .content {
-    padding: 1.5rem 1rem;
+  .weekly-sales-chart {
+    width: 60%;
   }
 
-  .circle-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: white;
-    color: rgb(0, 166, 166);
-    font-size: 3rem;
-  }
-}
-
-.item-inner {
-  height: 100%;
-  background-color: #f5f5f5;
-}
-
-.balance-sheet {
-  li {
-    display: flex;
-    flex-wrap: wrap;
-    color: rgb(31, 33, 33);
-    font-weight: 700;
-  }
-
-  .label {
-    width: 40%;
-    padding: 1rem 0;
-
-    &.total-value {
-      text-transform: uppercase;
-    }
-  }
-
-  .chart {
-    width: 40%;
-    padding-left: 1rem;
-  }
-
-  .value {
+  .circle-chart {
     width: 20%;
-    padding: 1rem 0;
-
-    .currency {
-      margin-right: .7rem;
-    }
-  }
-
-  .info-list,
-  .sub-info-list {
-    width: 100%;
-  }
-
-  .info-list {
-    .info-list-item {
-      margin-bottom: 1rem;
-    }
-
-    .label {
-      padding-left: 2rem;
-    }
-  }
-
-  .sub-info-list {
-
-    li {
-      font-weight: 400;
-    }
-
-    .label {
-      padding-left: 4rem;
-    }
-  }
-}
-
-chart {
-  height: 25rem;
-}
-
-@media (max-width: 1600px) {
-  chart {
-    height: 20rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  .fp-item {
-    .header {
-      font-size: 2.4rem;
-    }
-
-    .content {
-      padding: 2rem 4rem;
-    }
-
-    .circle-title {
-      width: 150px;
-      height: 150px;
-      font-size: 5rem;
-    }
+    
   }
 }
