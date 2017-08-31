@@ -1,0 +1,78 @@
+chart {
+    height: 200px;
+}
+
+.card {
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+    .person-img {
+        width: 20%;
+    }
+    .person-rates {
+        width: 80%;
+    }
+
+    .mount-chart {
+        height: 125px;
+    }
+    .line-chart {
+        height: 50px;
+    }
+}
+
+h1, h4 {
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    // margin: 0;
+}
+
+.container-left {
+    width: 50%;
+}
+
+.container-right {
+    width: 50%;
+    @extend .container-left
+}
+
+.sales-cycle-item {
+    height: 300px;
+    padding: 15px;
+
+    .title {
+        display: block;
+        // width: 100%;
+        text-align: center;
+
+        .chart-clarification {
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 25px;
+        }
+    }
+}
+
+.sales-stages-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+
+    .gray-heading {
+        text-align: center;
+        margin: 0;
+        color: #AEA5A6;
+    }
+
+    .block-chart {
+        width: 65%;
+        height: 100%;
+    }
+
+}

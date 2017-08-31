@@ -15,6 +15,19 @@
 
     <h3 class="gray-heading">Sales Funnel & Avg. length of Sales Stages</h3>
 
+    <div class="block-average-sales">
+      <chart class="block-chart" [options]="myCharts[2]?.options"></chart>
+    </div>  
+
+    <div class="list-average-sales">
+        <ul class="average-list">
+            <li class="li-opportunities"><span class="blue">Opportunities</span> <br> 1.478</li>
+            <li class="li-proposal"><span class="pink">Proposal</span> <br> 455</li>
+            <li class="li-negotiation"><span class="orange">Negotiation</span> <br> 357</li>
+            <li class="li-closing"><span class="gray">Closing</span> <br> 111</li>
+          </ul>
+      </div>
+
   </div>
 
 </div>  
@@ -29,7 +42,8 @@
     <div class="person-rates">
         <div class="card-chart-wrapper">
           <h4>lead Conversation Rate</h4>
-  
+          <chart class="mount-chart" [options]="myCharts[5]?.options"></chart>
+          <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
           <h4>sales cycle length</h4>
         </div>
       </div>
@@ -43,7 +57,8 @@
       <div class="person-rates">
           <div class="card-chart-wrapper">
             <h4>lead Conversation Rate</h4>
-    
+            <chart class="mount-chart" [options]="myCharts[4]?.options"></chart>
+            <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
             <h4>sales cycle length</h4>
           </div>
         </div>
@@ -57,7 +72,8 @@
         <div class="person-rates">
             <div class="card-chart-wrapper">
               <h4>lead Conversation Rate</h4>
-      
+              <chart class="mount-chart" [options]="myCharts[3]?.options"></chart>
+              <chart class="line-chart" [options]="myCharts[6]?.options"></chart>
               <h4>sales cycle length</h4>
             </div>
           </div>
@@ -65,95 +81,4 @@
 
 </div>
 
-<<<<<<< HEAD
 </div>
-=======
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[2]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[2]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[2]?.options"></chart>
-  </div>
-</div>
-
-
-
-
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[3]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[3]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[3]?.options"></chart>
-  </div>
-</div>
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[6]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[6]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[6]?.options"></chart>
-  </div>
-</div>
-
-
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[4]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[4]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[4]?.options"></chart>
-  </div>
-</div>
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[8]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[8]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[8]?.options"></chart>
-  </div>
-</div>
-
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[5]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[5]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[5]?.options"></chart>
-  </div>
-</div>
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[8]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[8]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[8]?.options"></chart>
-  </div>
-</div>
->>>>>>> 6eda3fe8efb32162add78ffc92f36a645d9fc215
