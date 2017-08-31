@@ -53,6 +53,9 @@ export class FinancialOverviewComponent implements OnInit {
         verticalAlign: 'top',
         backgroundColor: '#FFFFFF'
       },
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           marker: {
@@ -129,6 +132,9 @@ export class FinancialOverviewComponent implements OnInit {
         layout: 'horizontal',
        verticalAlign: 'bottom',
         backgroundColor: '#FFFFFF'
+      },
+      credits: {
+        enabled: false
       },
       plotOptions: {
         series: {

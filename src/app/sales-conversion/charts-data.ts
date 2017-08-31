@@ -2,7 +2,6 @@ export const chartData: any = {
   'CONVERTED LEADS': {
     title: 'CONVERTED LEADS',
     options: {
-
       chart: {
         type: 'column',
       },
@@ -54,7 +53,9 @@ export const chartData: any = {
       yAxis: {
         visible: false
       },
-
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           color: '#65c178',
@@ -189,7 +190,9 @@ export const chartData: any = {
       yAxis: {
         visible: false
       },
-
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           color: '#65c178',
@@ -346,6 +349,9 @@ export const chartData: any = {
 
       yAxis: {
         visible: false
+      },
+      credits: {
+        enabled: false
       },
 
       plotOptions: {
@@ -504,6 +510,9 @@ export const chartData: any = {
 
       yAxis: {
         visible: false
+      },
+      credits: {
+        enabled: false
       },
 
       plotOptions: {

@@ -87,12 +87,12 @@ export const chartData: any =
         footerFormat: '',
         valueDecimals: 1
       },
-
-
+      credits: {
+        enabled: false
+      },
       legend: {
         enabled: false
       },
-
       series: [{
         name: 'RoA',
         data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
