@@ -1,8 +1,20 @@
 <h2 class="content-title">Sales Performance Dashboard</h2>
 
-  <div class="page-wrapper">
+  <div class="sp-page-wrapper">
 
     <div class="top-section">
+
+        <div class="ytd-block">
+          <div class="customer-section top">
+            <span class="fa fa"></span><span class="points">358 <br> new customer | ytd</span>
+          </div>
+          <div class="customer-section mid">
+            <span class="fa fa"></span><span class="points">1.180.357 $ <br> sales revenue | ytd</span>
+          </div>
+          <div class="customer-section bottom">
+            <span class="fa fa"></span><span class="points">930.216 <br> profit | ytd</span>
+          </div>
+        </div>
 
         <div class="weekly-sales-chart ">
           <chart [options]="myCharts[6]?.options"></chart>

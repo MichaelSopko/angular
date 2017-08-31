@@ -1,11 +1,13 @@
-.page-wrapper {
-  display: flex;
-  // flex-wrap: wrap;
 
-}
 
 .top-section {
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
   height: 400px;
+  background-color: #46E3DF;
+
+  .ytd-block {
+    width: 30%;
+  }
 }
