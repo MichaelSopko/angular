@@ -11,7 +11,7 @@
           <div class="circle-title">
             <span>{{myCharts[1]?.circleTitleData}}</span>
           </div>
-           <chart [options]="myCharts[1]?.options"></chart> 
+           <chart [options]="myCharts[1]?.options"></chart>
         </div>
       </div>
     </div>
@@ -65,6 +65,7 @@
         <div class="header">
           <span>BALANCE SHEET</span>
         </div>
+
         <div class="content">
           <ul class="balance-sheet">
             <li>
@@ -73,7 +74,10 @@
                 <span class="currency">€</span>
                 <span class="count">1.424.091</span>
               </div>
-              <div class="chart"></div>
+              <div class="chart">
+
+
+              </div>
 
               <ul class="info-list">
                 <li class="info-list-item">
@@ -82,7 +86,10 @@
                     <span class="currency">€</span>
                     <span class="count">942.091</span>
                   </div>
-                  <div class="chart"></div>
+                  <div class="chart">
+
+                    <chart [options]="myCharts[5]?.options"></chart>
+                  </div>
 
                   <ul class="sub-info-list">
                     <li>
@@ -91,7 +98,9 @@
                         <span class="currency">€</span>
                         <span class="count">238.126</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[6]?.options"></chart>
+                      </div>
                     </li>
                     <li>
                       <div class="label">Accounts Receivable</div>
@@ -99,7 +108,9 @@
                         <span class="currency">€</span>
                         <span class="count">458.863</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[7]?.options"></chart>
+                      </div>
                     </li>
                     <li>
                       <div class="label">Inventory</div>
@@ -107,7 +118,9 @@
                         <span class="currency">€</span>
                         <span class="count">245.102</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[8]?.options"></chart>
+                      </div>
                     </li>
                   </ul>
                 </li>
@@ -117,7 +130,9 @@
                     <span class="currency">€</span>
                     <span class="count">400.000</span>
                   </div>
-                  <div class="chart"></div>
+                  <div class="chart">
+                    <chart [options]="myCharts[9]?.options"></chart>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -129,7 +144,9 @@
                 <span class="currency">€</span>
                 <span class="count">1.424.091</span>
               </div>
-              <div class="chart"></div>
+              <div class="chart">
+                <chart [options]="myCharts[10]?.options"></chart>
+              </div>
 
               <ul class="info-list">
 
@@ -139,7 +156,9 @@
                     <span class="currency">€</span>
                     <span class="count">942.091</span>
                   </div>
-                  <div class="chart"></div>
+                  <div class="chart">
+                    <chart [options]="myCharts[11]?.options"></chart>
+                  </div>
 
                   <ul class="sub-info-list">
 
@@ -149,7 +168,9 @@
                         <span class="currency">€</span>
                         <span class="count">1.238.126</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[12]?.options"></chart>
+                      </div>
                     </li>
 
                     <li>
@@ -158,7 +179,9 @@
                         <span class="currency">€</span>
                         <span class="count">58.863</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[13]?.options"></chart>
+                      </div>
                     </li>
 
                   </ul>
@@ -171,7 +194,9 @@
                     <span class="currency">€</span>
                     <span class="count">440.000</span>
                   </div>
-                  <div class="chart"></div>
+                  <div class="chart">
+                    <chart [options]="myCharts[14]?.options"></chart>
+                  </div>
 
                   <ul class="sub-info-list">
 
@@ -181,16 +206,20 @@
                         <span class="currency">€</span>
                         <span class="count">438.126</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[15]?.options"></chart>
+                      </div>
                     </li>
 
                     <li>
-                      <div class="label">Common Stock</div>
+                      <div class="label">Current Earnings</div>
                       <div class="value">
                         <span class="currency">€</span>
                         <span class="count">458.863</span>
                       </div>
-                      <div class="chart"></div>
+                      <div class="chart">
+                        <chart [options]="myCharts[16]?.options"></chart>
+                      </div>
                     </li>
 
                   </ul>

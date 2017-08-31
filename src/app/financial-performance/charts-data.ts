@@ -28,6 +28,53 @@ export const chartData: any =
       categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
       data: [0.5, 0.4, 0.37, 0.48, 0.45, 0.54, 0.32]
     },
+
+    'Current Assets': {
+      title: 'Current Assets'
+    },
+
+    COLUMNS: {
+      'options': {
+        chart: {
+          type: 'column',
+          backgroundColor: '#f5f5f5',
+        },
+        title: {
+          text: ''
+        },
+        xAxis: {
+          visible: false,
+          categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
+        },
+        yAxis: {
+          visible: false
+        },
+        plotOptions: {
+          series: {
+            color: '#59b5a6'
+          }
+        },
+        tooltip: {
+          shared: true,
+          useHTML: true,
+          headerFormat: '<b>{point.key}</b><br>',
+          pointFormat: '{series.name}:' + ' <b>{point.y:.0f} EUR</b>',
+          footerFormat: '',
+          valueDecimals: 10
+        },
+
+
+        legend: {
+          enabled: false
+        },
+
+        series: [{
+          name: 'RoA',
+          data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
+        }]
+      }
+    },
+
     'options': {
       chart: {
         type: 'column',
@@ -38,8 +85,6 @@ export const chartData: any =
       },
       xAxis: {
         categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
-        //lineColor:  'white',
-        //tickColor: 'white'
       },
       yAxis: {
         visible: false
@@ -64,7 +109,7 @@ export const chartData: any =
       },
 
       series: [{
-        name: 'RoA',
+        name: 'Current Assets',
         data: [0.2, 0.23, 0.24, 0.18, 0.17, 0.16, 0.17]
       }]
     }
