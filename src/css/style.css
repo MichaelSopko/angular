@@ -49,6 +49,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  background: #f8f8f9;
 }
 
      /*Styles for header     */
@@ -218,6 +219,10 @@ chart {
 
 /*   -----------------   */
 
+.aside-menu-list-item {
+  background: #ffffff;
+}
+
 .aside-menu-list-item.active {
   background: #f8f8f9;
   border-left: 4px solid #11c2a1;
@@ -249,7 +254,6 @@ chart {
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 2rem 1.4rem 2.5rem;
-  background: #fff;
   color: #676a6c;
   font-size: 1.3rem;
   line-height: 1.8rem;

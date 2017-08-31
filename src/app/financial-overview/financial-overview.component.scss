@@ -2,12 +2,32 @@
   display: flex;
 
   .left-side {
+    display: flex;
+    flex-wrap: wrap;
     width: 70%;
+  }
+
+  .right-side {
+    width: 30%;
+
+    .chart-card {
+      height: 100%;
+
+      &-inner {
+        height: 100%;
+      }
+    }
+
+    .card-title {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
   }
 }
 
 .info-cards-wrapper {
   display: flex;
+  width: 100%;
 
   .card-wrapper {
     width: 25%;
@@ -45,6 +65,64 @@
     &-4 {
       background-color: rgb(123, 233, 168);
     }
+  }
+}
+
+.chart-card {
+  width: 100%;
+  padding: 1rem;
+
+  &-inner {
+    padding: 1.5rem;
+    background: #fff;
+  }
+
+  &.half {
+    width: 50%;
+  }
+}
+
+.income-statement {
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(102, 102, 102);
+    font-weight: 700;
+  }
+
+  .label {
+    width: 60%;
+    padding: 1.5rem 0;
+
+    &.accent {
+      text-transform: uppercase;
+    }
+  }
+
+  .value {
+    width: 40%;
+    padding: 1.5rem 0;
+    text-align: right;
+
+    .currency {
+      margin-left: 1rem;
+    }
+  }
+
+  .info-sub-list {
+    width: 100%;
+
+    .sub-list-item {
+      font-weight: 400;
+
+      .label {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .line {
+    border-bottom: 1px solid rgb(102, 102, 102);
   }
 }
 
