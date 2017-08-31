@@ -46,7 +46,7 @@
       <span class="user-position">Art Director</span>
     </div>
     <ul class="aside-menu">
-      <li class="aside-menu-list-item active">
+      <li class="aside-menu-list-item " [class.active]="isDashboardOpened" (click)="isDashboardOpened=!isDashboardOpened">
         <a href="javascript:;" class="menu-item">
               <span class="label-wrap">
                 <span class="fa fa-th-large"></span>

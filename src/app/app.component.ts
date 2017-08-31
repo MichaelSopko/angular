@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AppService } from './core/app.service';
+import {Component} from '@angular/core';
+import {AppService} from './core/app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { AppService } from './core/app.service';
 })
 export class AppComponent {
   sideBarIsVisible = true;
+  isDashboardOpened = false;
 
   constructor(private _appService: AppService) {
   }
