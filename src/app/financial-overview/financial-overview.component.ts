@@ -49,11 +49,8 @@ export class FinancialOverviewComponent implements OnInit {
       },
       legend: {
         layout: 'vertical',
-        align: 'left',
-        x: 80,
+        align: 'right',
         verticalAlign: 'top',
-        y: 55,
-        floating: true,
         backgroundColor: '#FFFFFF'
       },
       plotOptions: {
