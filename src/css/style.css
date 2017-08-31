@@ -216,6 +216,8 @@ chart {
   line-height: 1.8rem;
 }
 
+/*   -----------------   */
+
 .aside-menu-list-item.active {
   background: #f8f8f9;
   border-left: 4px solid #11c2a1;
@@ -229,8 +231,17 @@ chart {
   transform: none;
 }
 
-.aside-sub-menu {
+.aside-menu-list-item.active .aside-sub-menu {
+  height: 24.7rem;
+  opacity: 1;
   padding-bottom: .5rem;
+}
+
+.aside-menu-list-item.active .sub-menu-item {
+  /*display: block;*/
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-item {
@@ -238,6 +249,7 @@ chart {
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 2rem 1.4rem 2.5rem;
+  background: #fff;
   color: #676a6c;
   font-size: 1.3rem;
   line-height: 1.8rem;
@@ -255,12 +267,22 @@ chart {
   margin-left: .5rem;
 }
 
+.aside-sub-menu {
+  height: 0;
+  opacity: 0;
+  transition: all 300ms ease 0s;
+}
+
 .sub-menu-item {
   display: block;
   padding: .7rem 1rem .7rem 5.2rem;
   color: #676a6c;
   font-size: 1.3rem;
   line-height: 1.8rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 300ms ease 0s;
 }
 
 .sub-menu-item:hover {

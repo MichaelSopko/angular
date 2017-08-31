@@ -1,37 +1,74 @@
+<h2 class="content-title">Financial overview</h2>
 
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[1]?.title}}</span>
+<div class="content-wrapper">
+  <div class="left-side">
+    <div class="info-cards-wrapper">
+
+      <div class="card-wrapper">
+        <div class="card card-1">
+          <h3 class="card-title">GROSS PROFIT MARGIN</h3>
+          <span class="value">84%</span>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card card-2">
+          <h3 class="card-title">OPEX RATIO</h3>
+          <span class="value">74%</span>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card card-3">
+          <h3 class="card-title">EBIT MARGIN</h3>
+          <span class="value">18%</span>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <div class="card card-4">
+          <h3 class="card-title">NET PROFIT MARGIN</h3>
+          <span class="value">14%</span>
+        </div>
+      </div>
+
     </div>
-    <div class="title">
-      <span>{{myCharts[1]?.circleTitleData}}</span>
+
+    <div class="ir-item">
+      <div class="ir-inner background-navajowhite">
+        <div class="header">
+          <span>{{myCharts[1]?.title}}</span>
+        </div>
+        <div class="title">
+          <span>{{myCharts[1]?.circleTitleData}}</span>
+        </div>
+        <chart [options]="myCharts[1]?.options"></chart>
+      </div>
     </div>
-    <chart [options]="myCharts[1]?.options"></chart>
+
+    <div class="ir-item">
+      <div class="ir-inner background-navajowhite">
+        <div class="header">
+          <span>{{myCharts[2]?.title}}</span>
+        </div>
+        <div class="title">
+          <span>{{myCharts[2]?.circleTitleData}}</span>
+        </div>
+        <chart [options]="myCharts[2]?.options"></chart>
+      </div>
+    </div>
+
+    <div class="ir-item">
+      <div class="ir-inner background-navajowhite">
+        <div class="header">
+          <span>{{myCharts[3]?.title}}</span>
+        </div>
+        <div class="title">
+          <span>{{myCharts[3]?.circleTitleData}}</span>
+        </div>
+        <chart [options]="myCharts[3]?.options"></chart>
+      </div>
+    </div>
   </div>
-</div>
-
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[2]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[2]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[2]?.options"></chart>
-  </div>
-</div>
-
-<div class="ir-item">
-  <div class="ir-inner background-navajowhite">
-    <div class="header">
-      <span>{{myCharts[3]?.title}}</span>
-    </div>
-    <div class="title">
-      <span>{{myCharts[3]?.circleTitleData}}</span>
-    </div>
-    <chart [options]="myCharts[3]?.options"></chart>
-  </div>
+  <div class="right-side"></div>
 </div>
