@@ -37,6 +37,9 @@ export class SalesCycleComponent implements OnInit {
         text: 'Sales funnel',
         x: -50
       },
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         funnel: {
           colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa']
@@ -234,6 +237,9 @@ export class SalesCycleComponent implements OnInit {
       legend: {
         enabled: false
       },
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         column: {
           colors: ['#35aaae', '#ec8190', '#feb074', '#aaaaaa'],
@@ -295,6 +301,9 @@ export class SalesCycleComponent implements OnInit {
       legend: {
         enabled: false
       },
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           stacking: 'normal',
@@ -339,6 +348,9 @@ export class SalesCycleComponent implements OnInit {
     this.myCharts[8].options = {
       chart: {
         type: 'bar'
+      },
+      credits: {
+        enabled: false
       },
       title: {
         text: ''

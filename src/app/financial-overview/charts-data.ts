@@ -11,6 +11,9 @@ export const chartData: any = {
       xAxis: {
         categories: ['January 2016', 'February 2016', 'March 2016', 'April 2016', 'May 2016', 'June 2016', 'July 2016', 'August 2016', 'September 2016', 'October 2016', 'November 2016', 'December 2016'],
       },
+      credits: {
+        enabled: false
+      },
       yAxis: {
         min: 0,
         max: 120,
@@ -64,6 +67,9 @@ export const chartData: any = {
       },
       xAxis: {
         categories: ['January 2016', 'February 2016', 'March 2016', 'April 2016', 'May 2016', 'June 2016', 'July 2016', 'August 2016', 'September 2016', 'October 2016', 'November 2016', 'December 2016'],
+      },
+      credits: {
+        enabled: false
       },
       yAxis: {
         min: 0,

@@ -39,6 +39,9 @@ export const chartData: any =
           type: 'column',
           backgroundColor: '#f5f5f5',
         },
+        credits: {
+          enabled: false
+        },
         title: {
           text: ''
         },
@@ -102,8 +105,9 @@ export const chartData: any =
         footerFormat: '',
         valueDecimals: 10
       },
-
-
+      credits: {
+        enabled: false
+      },
       legend: {
         enabled: false
       },

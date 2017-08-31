@@ -16,6 +16,9 @@ export const chartData: any = {
       yAxis: {
         visible: false
       },
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           color: '#59b5a6'
@@ -51,6 +54,9 @@ export const chartData: any = {
       },
       title: {
         text: ''
+      },
+      credits: {
+        enabled: false
       },
 
       plotOptions: {
@@ -106,7 +112,9 @@ export const chartData: any = {
       yAxis: {
         visible: false
       },
-
+      credits: {
+        enabled: false
+      },
       plotOptions: {
         series: {
           color: '#59b5a6',
@@ -155,6 +163,9 @@ export const chartData: any = {
       yAxis: {
         visible: false
       },
+      credits: {
+        enabled: false
+      },
 
       plotOptions: {
         series: {
@@ -202,6 +213,9 @@ export const chartData: any = {
 
       yAxis: {
         visible: false
+      },
+      credits: {
+        enabled: false
       },
 
       plotOptions: {
@@ -319,6 +333,9 @@ export const chartData: any = {
 
       yAxis: {
         visible: false
+      },
+      credits: {
+        enabled: false
       },
 
       plotOptions: {

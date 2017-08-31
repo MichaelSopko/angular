@@ -16,6 +16,9 @@ export const chartData: any =
       title: {
         text: ''
       },
+      credits: {
+        enabled: false
+      },
       xAxis: {
         categories: ['Q2 2014', 'Q3 2014', 'Q4 2014', 'Q1 2015', 'Q2 2015', 'Q3 2015', 'Q4 2015'],
         lineColor: '#54a2ae',
