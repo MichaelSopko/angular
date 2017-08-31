@@ -1,101 +1,48 @@
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 600px; ">
-  <div class="">
-    <span>{{myCharts[3]?.title}}</span>
-  </div>
-  <div class="">
+<h2 class="content-title">Sales Performance Dashboard</h2>
 
+  <div class="sp-page-wrapper">
 
-    <chart [options]="myCharts[3]?.options"></chart>
-  </div>
-</div>
+    <div class="top-section">
 
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div style="width: 600px; ">
-  <div class="">
-    <span>{{myCharts[4]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[4]?.options"></chart>
-  </div>
-</div>
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div style="width: 600px; ">
-  <div class="">
-    <span>{{myCharts[5]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[5]?.options"></chart>
-  </div>
-</div>
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div style="width: 600px; height: 150px">
-  <div class="">
-    <span>{{myCharts[6]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[6]?.options"></chart>
-  </div>
-</div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div style="width: 400px; height: 400px">
-  <div class="">
-    <span>{{myCharts[7]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[7]?.options" class="gauge"></chart>
-  </div>
-</div>
-
-<h2 class="content-title">SALES PERFORMANCE DASHBOARD</h2>
-
-<div class="content-wrapper">
-  <div class="left-side">
-  <div class="fp-item">
-
-    <div class="item-inner">
-      <div class="header">
-        <span>{{myCharts[1]?.title}}</span>
-      </div>
-      <div class="content">
-
-
-        <chart [options]="myCharts[1]?.options"></chart>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="left-side">
-    <div class="fp-item">
-
-      <div class="item-inner">
-        <div class="header">
-          <span>{{myCharts[2]?.title}}</span>
+        <div class="ytd-block">
+          <div class="customer-section top">
+            <span class="fa fa"></span><span class="points">358 <br> new customer | ytd</span>
+          </div>
+          <div class="customer-section mid">
+            <span class="fa fa"></span><span class="points">1.180.357 $ <br> sales revenue | ytd</span>
+          </div>
+          <div class="customer-section bottom">
+            <span class="fa fa"></span><span class="points">930.216 <br> profit | ytd</span>
+          </div>
         </div>
-        <div class="content">
 
-
+        <div class="weekly-sales-chart ">
+          <chart [options]="myCharts[6]?.options"></chart>
+        </div>
+        <div class="circle-chart">
+          <chart [options]="myCharts[7]?.options" class="gauge"></chart>
+        </div>
+      
+    </div>
+    <div class="bottom-section">
+      <div class="growth-chart-wrap">
+          <chart [options]="myCharts[1]?.options"></chart>
+      </div>
+      <div class="sales-chart-wrap">
           <chart [options]="myCharts[2]?.options"></chart>
+      </div>
+      <div class="right-section">
+        <div class="revenue-chart">
+          <chart [options]="myCharts[3]?.options"></chart>
+        </div>
+        <div class="lifetime-chart">
+          <chart [options]="myCharts[4]?.options"></chart>
+        </div>
+        <div class="acquisition-chart">
+          <chart [options]="myCharts[5]?.options"></chart>
         </div>
       </div>
+
     </div>
+
   </div>
-
-
-
-
-
-</div>

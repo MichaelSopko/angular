@@ -48,6 +48,7 @@ export class SalesCycleComponent implements OnInit {
             format: '{point.name}',
             color: 'white',
             softConnector: true,
+            connectorWidth: 0,
             useHTML: true,
             shadow: false,
             verticalAlign: 'middle',
@@ -82,7 +83,6 @@ export class SalesCycleComponent implements OnInit {
     this.myCharts[2].options.chart.events = {};
     this.myCharts[2].options.tooltip = {enabled: false};
     this.myCharts[2].options.chart.events.render = function ($event) {
-      console.log($event.target);
       // Draw the flow chart
       const target = $event.target;
       const ren = target.renderer;
@@ -91,7 +91,15 @@ export class SalesCycleComponent implements OnInit {
       const y1 = target.chartHeight / 4;
       const y2 = y1 + 200;
 
-      ren.path(['M', x1, y1, 'C', x1 - 90, y2 - 50, x1, y2, x1 + 50, y2,
+      if (target.myCustompath) {
+        target.myCustompath.element.remove();
+      }
+
+      if (target.myCustompathLabel) {
+        target.myCustompathLabel.element.remove();
+      }
+
+      target.myCustompath = ren.path(['M', x1, y1, 'C', x1 - 90, y2 - 50, x1, y2, x1 + 50, y2,
         'L', x2, y2, 'L', x2 - 15, y2 - 5, 'M', x2, y2, 'L', x2 - 15, y2 + 5])
         .attr({
           'stroke-width': 2,
@@ -99,10 +107,13 @@ export class SalesCycleComponent implements OnInit {
         })
         .add();
 
-      ren.label('7%', x1 - 20, y1 * 5 / 2)
+      target.myCustompathLabel = ren.label('7%',
+        x1 - 20, y1 * 5 / 2, )
         .css({
+          width: '100px',
           color: '#333',
-          fontSize: '18px'
+          fontSize: '18px',
+          border: '1px solid black'
         })
         .add();
 

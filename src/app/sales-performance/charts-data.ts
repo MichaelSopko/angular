@@ -243,7 +243,7 @@ export const chartData: any = {
 
       chart: {
         type: 'column',
-        backgroundColor: '#47aba7',
+        backgroundColor: 'transparent',
       },
       title: {
         text: ''
@@ -404,7 +404,7 @@ export const chartData: any = {
     options: {
       chart: {
         type: 'solidgauge',
-        backgroundColor: '#47aba7',
+        backgroundColor: 'transparent',
       },
 
       title: '',
