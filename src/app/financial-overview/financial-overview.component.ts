@@ -49,11 +49,8 @@ export class FinancialOverviewComponent implements OnInit {
       },
       legend: {
         layout: 'vertical',
-        align: 'left',
-        x: 80,
+        align: 'right',
         verticalAlign: 'top',
-        y: 55,
-        floating: true,
         backgroundColor: '#FFFFFF'
       },
       plotOptions: {
@@ -102,8 +99,69 @@ export class FinancialOverviewComponent implements OnInit {
     this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
 
     this.myCharts[3] = {};
-    this.myCharts[3].title = chartData['EARNINGS BEFORE'].title;
-    this.myCharts[3].options = chartData['EARNINGS BEFORE'].options;
+    this.myCharts[3].title = 'revenue';
+    this.myCharts[3].options = {
+      chart: {
+        zoomType: 'xy'
+      },
+      title: {
+        text: ''
+      },
+      xAxis: [{
+        categories: ['Jan 16', 'Feb 16', 'Mar 16', 'Apr 16', 'May 16', 'Jun 16',
+          'Jul 16', 'Aug 16', 'Sep 16', 'Oct 16', 'Nov 16', 'Dec 16']
+      }],
+      yAxis: [{
+        gridLineWidth: 1,
+        min: 0,
+        tickInterval: 100,
+        title: {
+          text: ''
+        },
+        labels: {
+          format: '€{value}k',
+        }
+      }],
+      tooltip: {
+        shared: true
+      },
+      legend: {
+        layout: 'horizontal',
+       verticalAlign: 'bottom',
+        backgroundColor: '#FFFFFF'
+      },
+      plotOptions: {
+        series: {
+          marker: {
+            enabled: false
+          }
+        }
+      },
+      series: [{
+        name: 'EBIT Target',
+        type: 'line',
+        color: '#49d6be',
+        data: [104, 124, 138, 153, 169, 186, 202, 218, 232, 251, 267, 259],
+        marker: {
+          enabled: false
+        },
+        dashStyle: 'shortdot',
+        tooltip: {
+          valueSuffix: 'k',
+          valuePrefix: '€'
+        }
+
+      }, {
+        name: 'EBIT Actual',
+        type: 'line',
+        color: '#49b7ec',
+        data: [118, 153, 138, 168, 170, 177, 180, 192, 220, 218, 248, 232],
+        tooltip: {
+          valueSuffix: 'k',
+          valuePrefix: '€'
+        }
+      }]
+    };
   }
 
   ngOnInit() {
