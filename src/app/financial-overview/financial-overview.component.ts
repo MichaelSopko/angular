@@ -100,6 +100,10 @@ export class FinancialOverviewComponent implements OnInit {
     this.myCharts[2] = {};
     this.myCharts[2].title = chartData['OPERATIONAL EXPENSES'].title;
     this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
+
+    this.myCharts[3] = {};
+    this.myCharts[3].title = chartData['EARNINGS BEFORE'].title;
+    this.myCharts[3].options = chartData['EARNINGS BEFORE'].options;
   }
 
   ngOnInit() {
