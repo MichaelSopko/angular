@@ -99,10 +99,16 @@ export class SalesCycleComponent implements OnInit {
         })
         .add();
 
-      ren.label('7%', x1 - 20, y1 * 5 / 2)
+      ren.label('<span style="border: 1px solid black;border-radius: 50%;padding: 5px;">7%<span>',
+        x1 - 20, y1 * 5 / 2, 'rect', 1, 1, true, true)
+        .attr({
+          width: 100
+        })
         .css({
+          width: '100px',
           color: '#333',
-          fontSize: '18px'
+          fontSize: '18px',
+          border: '1px solid black'
         })
         .add();
 
