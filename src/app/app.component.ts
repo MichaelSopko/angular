@@ -33,7 +33,7 @@ export class AppComponent {
 
 
   toggleMenu() {
-    // 1-line if statement that toggles the value:
+
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -44,10 +44,14 @@ export class AppComponent {
     window.dispatchEvent(new Event('resize'));
   }
 
-  constructor(private _appService: AppService) {
-  }
-
   showSideBar() {
     this.sideBarIsVisible = !this.sideBarIsVisible;
+    console.log('this.sideBarIsVisible', this.sideBarIsVisible);
   }
+
+  constructor(private _appService: AppService) {
+    console.log(window.innerWidth, this.menuState, this.sideBarIsVisible);
+  }
+
+
 }
