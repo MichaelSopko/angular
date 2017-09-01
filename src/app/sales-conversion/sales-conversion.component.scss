@@ -1,14 +1,231 @@
-.lowHeight {
-  height: 100px;
+.content-wrapper {
+  flex-wrap: wrap;
 }
 
-.gaugeSquare {
-  width: 200px;
-  height: 200px;
-}
-.gaugePercentage{
+.left-side {
+  width: 100%;
 
-}
-.gaugePercentageSpan{
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 2rem 1rem;
+    color: #fff;
 
+    &-1 {
+      background-color: rgb(21, 128, 126);
+    }
+
+    &-2 {
+      background-color: rgb(25, 148, 135);
+    }
+
+    &-3 {
+      background-color: rgb(29, 163, 129);
+    }
+
+    &-4 {
+      background-color: rgb(80, 184, 142);
+    }
+
+    &-5 {
+      background-color: rgb(120, 218, 169);
+    }
+  }
+
+  .card-heading {
+    font-size: 1.8rem;//
+  }
+
+  .count {
+    font-size: 2.2rem;//
+  }
+
+  .main-card {
+    display: block;
+    background-color: rgb(16, 127, 140);
+
+    .card-heading {
+      font-size: 2.6rem;
+    }
+
+    .count {
+      display: block;
+      margin: 1.5rem 0;
+      font-size: 2.6rem;
+    }
+
+    .description {
+      display: block;
+    }
+  }
 }
+
+.right-side {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+
+    .chart-cart-heading {
+      color: #989ea5;
+      text-transform: none;
+      font-size: 1.2rem;
+    }
+
+    .name {
+      font-size: 1.6rem;
+    }
+
+    .count {
+      display: block;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .caption {
+      display: block;
+      color: #989ea5;
+      font-size: 1.2rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .bar-chart {
+    chart {
+      height: 20rem;
+    }
+  }
+
+  .line-chart {
+    chart {
+      height: 10rem;
+    }
+  }
+
+  .circle-chart {
+
+    chart {
+      height: 20rem;
+    }
+  }
+
+  .chart-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .chart-card-inner {
+    height: 100%;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  .wrapper-left {
+    width: 100%;
+
+    .chart-card {
+      height: 33.33333%;
+    }
+  }
+
+  .wrapper-right {
+    width: 100%;
+
+    .chart-card {
+      height: 50%;
+    }
+
+    .chart-cart-heading {
+      padding: 1.5rem;
+      background-color: rgb(29, 163, 129);
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .left-side {
+    width: 100%;
+
+    .card {
+      padding: 4rem 2rem;
+    }
+
+    .card-heading {
+      font-size: 2.8rem;
+    }
+
+    .count {
+      font-size: 3.2rem;
+    }
+
+    .main-card {
+
+      .card-heading {
+        font-size: 3.6rem;
+      }
+
+      .count {
+        margin: 2rem 0;
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  .right-side {
+    width: 100%;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+
+      .chart-cart-heading {
+        font-size: 1.6rem;
+      }
+
+      .name {
+        font-size: 2.6rem;
+      }
+
+      .count {
+        font-size: 2.6rem;
+      }
+
+      .caption {
+        font-size: 1.6rem;
+      }
+    }
+
+    .chart-card-inner {
+      padding: 2rem;
+    }
+
+    .wrapper-left {
+      width: 60%;
+    }
+
+    .wrapper-right {
+      width: 40%;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .left-side {
+    width: 40%;
+  }
+
+  .right-side {
+    width: 60%;
+  }
+}
+

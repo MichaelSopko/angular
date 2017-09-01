@@ -4,7 +4,7 @@ export const chartData: any = {
     options: {
       chart: {
         type: 'column',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: 'transparent',
       },
       title: {
         text: ''
