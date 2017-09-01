@@ -38,7 +38,7 @@ export class AppComponent {
     }, 50);
   }
 
-  animationDone() {
+  animationDone(evnt: any) {
     window.dispatchEvent(new Event('resize'));
   }
 
