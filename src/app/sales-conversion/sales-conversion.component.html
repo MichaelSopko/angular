@@ -1,79 +1,139 @@
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 300px; height: 300px">
-  <div class="">
-    <span>{{myCharts[5]?.title}}</span>
+<h2 class="content-title">Sales conversion</h2>
+
+<div class="content-wrapper">
+  <div class="left-side">
+    <div class="card main-card">
+      <h3 class="card-heading">Lead Conversion Ratio</h3>
+      <span class="count">16:1</span>
+      <span class="description">Unqualified leads</span>
+      <span class="description">turned into customers</span>
+    </div>
+    <div class="card card-1">
+      <h3 class="card-heading">Leads</h3>
+      <span class="count">438</span>
+    </div>
+    <div class="card card-2">
+      <h3 class="card-heading">Opportunities</h3>
+      <span class="count">137</span>
+    </div>
+    <div class="card card-3">
+      <h3 class="card-heading">Negotiation</h3>
+      <span class="count">107</span>
+    </div>
+    <div class="card card-4">
+      <h3 class="card-heading">Proposal</h3>
+      <span class="count">66</span>
+    </div>
+    <div class="card card-5">
+      <h3 class="card-heading">Wins</h3>
+      <span class="count">27</span>
+    </div>
+
   </div>
-  <div class="">
 
+  <div class="right-side">
 
-    <chart [options]="myCharts[5]?.options" class="gaugeSquare"></chart>
+    <div class="chart-card">
+      <div class="chart-card-inner">
+        <h3 class="chart-cart-heading">
+          <span>{{myCharts[1]?.title}}</span>
+        </h3>
+        <div class="bar-chart">
+          <chart [options]="myCharts[1]?.options" class="gauge"></chart>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-left">
+
+      <div class="chart-card">
+        <div class="chart-card-inner">
+          <div class="card-header">
+            <div>
+              <span class="name">Daniel</span>
+              <h3 class="chart-cart-heading">
+                <span>{{myCharts[2]?.title}}</span>
+              </h3>
+            </div>
+            <div>
+              <span class="count">3%</span>
+              <span class="caption">conversion rate</span>
+            </div>
+          </div>
+          <div class="line-chart">
+            <chart [options]="myCharts[2]?.options" class="lowHeight"></chart>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-inner">
+          <div class="card-header">
+            <div>
+              <span class="name">Anna</span>
+              <h3 class="chart-cart-heading">
+                <span>{{myCharts[3]?.title}}</span>
+              </h3>
+            </div>
+            <div>
+              <span class="count">11%</span>
+              <span class="caption">conversion rate</span>
+            </div>
+          </div>
+          <div class="line-chart">
+            <chart [options]="myCharts[3]?.options" class="lowHeight"></chart>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-inner">
+          <div class="card-header">
+            <div>
+              <span class="name">Max</span>
+              <h3 class="chart-cart-heading">
+                <span>{{myCharts[4]?.title}}</span>
+              </h3>
+            </div>
+            <div>
+              <span class="count">7%</span>
+              <span class="caption">conversion rate</span>
+            </div>
+          </div>
+          <div class="line-chart">
+            <chart [options]="myCharts[4]?.options" class="lowHeight"></chart>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wrapper-right">
+
+      <div class="chart-card">
+        <div class="chart-card-inner">
+          <div class="circle-chart">
+            <chart [options]="myCharts[5]?.options" class="gaugeSquare"></chart>
+          </div>
+          <h3 class="chart-cart-heading">
+            <span>{{myCharts[5]?.title}}</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-inner">
+          <div class="circle-chart">
+            <chart [options]="myCharts[6]?.options" class="gaugeSquare"></chart>
+          </div>
+          <h3 class="chart-cart-heading">
+            <span>{{myCharts[6]?.title}}</span>
+          </h3>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 300px; height: 300px">
-  <div class="">
-    <span>{{myCharts[6]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[6]?.options" class="gaugeSquare"></chart>
-  </div>
-</div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div style="width: 600px; height: 350px">
-  <div class="">
-    <span>{{myCharts[1]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[1]?.options" class="gauge"></chart>
-  </div>
-</div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 600px; height: 150px">
-  <div class="">
-    <span>{{myCharts[2]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[2]?.options" class="lowHeight"></chart>
-  </div>
-</div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 600px; height: 150px">
-  <div class="">
-    <span>{{myCharts[3]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[3]?.options" class="lowHeight"></chart>
-  </div>
-</div>
-
-
-<!-- TODO  Fix THIS with CSS. PLEASE -->
-<div  style="width: 600px; height: 150px">
-  <div class="">
-    <span>{{myCharts[4]?.title}}</span>
-  </div>
-  <div class="">
-
-
-    <chart [options]="myCharts[4]?.options" class="lowHeight"></chart>
-  </div>
-</div>
-
-
 

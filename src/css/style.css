@@ -175,6 +175,7 @@ chart {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 999;
 }
 
 .aside.open {
@@ -305,10 +306,6 @@ chart {
   transition: all .4s ease 0s;
 }
 
-.main-content.with-sidebar {
-  margin-left: 22rem;
-}
-
 .content-wrapper {
   display: flex;
 }
@@ -334,6 +331,11 @@ chart {
 }
 
 @media (min-width: 1200px) {
+
+  .main-content.with-sidebar {
+    margin-left: 22rem;
+  }
+
   .input-field {
     display: block;
   }
