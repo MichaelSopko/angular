@@ -26,9 +26,11 @@ import {
   ]
 })
 export class AppComponent {
-  sideBarIsVisible = true;
+
   isDashboardOpened = false;
-  menuState: string = 'in';
+  menuState: string = window.innerWidth >= 1200 ? 'in' : 'out';
+  sideBarIsVisible = window.innerWidth >= 1200;
+
 
   toggleMenu() {
     // 1-line if statement that toggles the value:
