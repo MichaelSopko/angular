@@ -1,21 +1,186 @@
-
-
 .top-section {
+  margin: 10px;
   display: flex;
-  flex-wrap: wrap;
-  height: 400px;
-  background: linear-gradient(45deg, #46E4E0, #4EA7A3);
+  padding: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(35deg, #46E4E0, #4EA7A3);
 
-  .ytd-block {
-     width: 20%;
+  chart {
+    height: 200px;
   }
 
-  .weekly-sales-chart {
-    width: 60%;
+  .fa {
+    display: block;
+    height: 100%;
+    font-size: 4.5rem;
   }
 
-  .circle-chart {
-    width: 20%;
+  .points {
+
+    .count {
+      display: block;
+      font-size: 2.6rem;
+    }
+
+    .caption {
+      display: block;
+      font-size: 1.4rem;
+    }
+  }
+
+  .card {
+    padding: 0 4rem;
+    border-right: 2px solid #46E4E0;
+
+    &.card-info {
+      width: 30%;
+    }
+
+    &.bar-chart {
+      width: 45%;
+  
+    }
+
+    &.circle-chart {
+      width: 25%;
+      border: none;
+    }
+
+  }
+
+  .info-field {
+    padding: 15px 0;
+    display: flex;
+    border-bottom: 2px solid #46E4E0;
+
+    &:last-child {
+      border: none;
+    }
+
+    .icon-wrap {
+      width: 25%;
+    }
+
+    .points {
+      width: 75%;
+      text-align: left;
+    }
+  }
+}
+
+.bottom-section {
+  // margin: 0 10px;
+  color: #46E4E0; 
+  background: transparent;
+  @extend .top-section;
+
+  .card {
+    border: none;
+    padding: 20px;
+  }
+
+  .quotter-width {
+    margin: 0 10px 10px;
+    padding: 20px 40px;
+    width: 25%;
+    background-color: #fff;
+
+    .points {
+      margin-top: 5px;
+    }
+
+    .block {
+      margin-top: 50px;
+    }
+  }
+
+  .half-width {
+    margin: 0 10px 10px;
+    width: 50%;
+    background-color: #fff;
+  }
+
+  .caption {
+    margin: 15px;
+
+    &-small {
+      margin-bottom: 40px;
+      padding: 5px;
+      font-size: 70%;
+
+    }
+  }
+
+  .count {
+    color: #fff;
+    margin: 0 auto;
     
+    &.block {
+      width: 120px;
+      padding: 3px;
+      border-radius: 8px;
+      background-color: #54B2AE;
+    }
   }
+
+  .card-inner {
+    display: flex;
+    border-bottom: 2px solid #EDEDED;
+
+    chart {
+      height: 130px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .points {
+      width: 40%;
+    }
+
+    .caption {
+      margin-bottom: 5px;
+    }
+
+    .chart-hw {
+      width: 60%;
+    }
+
+  }
+
+  .accent {
+    font-weight: bold;
+  }
+
+  .list-caption {
+    margin-top: 20px;
+    color: #808080;
+    text-align: left;
+    
+    .square {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      .color-block {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+
+        &.fill-1 {
+          background-color: #A7FFFF;
+        }
+        &.fill-2 {
+          background-color: #6ADEDE;
+        }
+        &.fill-3 {
+          background-color: #19BFBF;
+        }
+      }
+    }
+  }
+
 }
