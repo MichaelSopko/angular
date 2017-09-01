@@ -102,7 +102,7 @@ export class FinancialOverviewComponent implements OnInit {
     this.myCharts[2].options = chartData['OPERATIONAL EXPENSES'].options;
 
     this.myCharts[3] = {};
-    this.myCharts[3].title = 'revenue';
+    this.myCharts[3].title = 'earnings before interest and taxes';
     this.myCharts[3].options = {
       chart: {
         zoomType: 'xy'
