@@ -74,21 +74,23 @@
     .chart-cart-heading {
       color: #989ea5;
       text-transform: none;
+      font-size: 1.2rem;
     }
 
     .name {
-      font-size: 2.6rem;
+      font-size: 1.6rem;
     }
 
     .count {
       display: block;
-      font-size: 2.6rem;
+      font-size: 1.6rem;
       text-align: center;
     }
 
     .caption {
       display: block;
       color: #989ea5;
+      font-size: 1.2rem;
       text-align: center;
       text-transform: uppercase;
     }
@@ -120,7 +122,7 @@
 
   .chart-card-inner {
     height: 100%;
-    padding: 2rem;
+    padding: 1rem;
     background: #fff;
   }
 
@@ -180,6 +182,31 @@
 
   .right-side {
     width: 100%;
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+
+      .chart-cart-heading {
+        font-size: 1.6rem;
+      }
+
+      .name {
+        font-size: 2.6rem;
+      }
+
+      .count {
+        font-size: 2.6rem;
+      }
+
+      .caption {
+        font-size: 1.6rem;
+      }
+    }
+
+    .chart-card-inner {
+      padding: 2rem;
+    }
 
     .wrapper-left {
       width: 60%;
