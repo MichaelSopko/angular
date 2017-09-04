@@ -1,84 +1,77 @@
-<div class="page-wrapper">
+<h2 class="content-title">SALES CYCLE DASHBOARD</h2>
 
-<div class="sc-items-wrapper container-left">
+<div class="content-wrapper">
 
-  <div class="sales-cycle-item">
-    <span class="title">
-      <h1>18,4 days</h1>
-      <span class="chart-clarification">average sales cycle length</span>
-    </span>  
+  <div class="container-left">
 
-    <chart [options]="myCharts[1]?.options"></chart>
-  </div>
-
-  <div class="sales-stages-wrapper">
-
-    <h3 class="gray-heading">Sales Funnel & Avg. length of Sales Stages</h3>
-
-    <div class="block-average-sales">
-      <chart class="block-chart" [options]="myCharts[2]?.options"></chart>
-    </div>  
-
-    <div class="list-average-sales">
-        <ul class="average-list">
-            <li class="li-opportunities"><span class="blue">Opportunities</span> <br> 1.478</li>
-            <li class="li-proposal"><span class="pink">Proposal</span> <br> 455</li>
-            <li class="li-negotiation"><span class="orange">Negotiation</span> <br> 357</li>
-            <li class="li-closing"><span class="gray">Closing</span> <br> 111</li>
-          </ul>
-      </div>
-
-  </div>
-
-</div>  
-
-<div class="cards-wrapper container-right">
-  
-  <div class="card">
-    <div class="person-img">
-      <span class="name">Justin</span>
-      <img src="" alt="" />
+    <div class="sales-cycle-item">
+      <span class="title">
+        <h1 class="chart-heading">18,4 days</h1>
+        <span class="clarification">average sales cycle length</span>
+      </span>  
+      <chart [options]="myCharts[1]?.options"></chart>
     </div>
-    <div class="person-rates">
-        <div class="card-chart-wrapper">
-          <h4>lead Conversation Rate</h4>
-          <chart class="mount-chart" [options]="myCharts[5]?.options"></chart>
-          <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
-          <h4>sales cycle length</h4>
-        </div>
-      </div>
-  </div>
 
-  <div class="card">
-      <div class="person-img">
+    <div class="sales-stages-wrapper">
+      <h2 class="title">Sales Funnel & Avg. length of Sales Stages</h2>
+        <chart [options]="myCharts[2]?.options"></chart>
+        <ul class="average-list">
+            <li><span class="blue">Opportunities</span>3,2 days on average</li>
+            <li><span class="pink">Proposal</span>3,8 days on average</li>
+            <li><span class="orange">Negotiation</span>7,0 days on average</li>
+            <li><span class="gray">Closing</span>4,3 days on average</li>
+          </ul>
+    </div>
+
+  </div>  
+
+  <div class="cards-wrapper">
+    
+    <div class="card">
+      <div class="user">
         <span class="name">Justin</span>
-        <img src="" alt="" />
-      </div>
+        <img src="../../assets/img/justin.jpg" alt="">
+      </div>  
       <div class="person-rates">
-          <div class="card-chart-wrapper">
-            <h4>lead Conversation Rate</h4>
-            <chart class="mount-chart" [options]="myCharts[4]?.options"></chart>
-            <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
-            <h4>sales cycle length</h4>
-          </div>
-        </div>
+        <h4 class="title">lead Conversation Rate</h4>
+        <span class="percent-count">22%</span>
+        <chart class="mount-chart" [options]="myCharts[5]?.options"></chart>
+        <h4 class="title">sales cycle length</h4>
+        <span class="percent-count">22%</span>
+        <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
+      </div>
     </div>
 
     <div class="card">
-        <div class="person-img">
-          <span class="name">Justin</span>
-          <img src="" alt="" />
-        </div>
-        <div class="person-rates">
-            <div class="card-chart-wrapper">
-              <h4>lead Conversation Rate</h4>
-              <chart class="mount-chart" [options]="myCharts[3]?.options"></chart>
-              <chart class="line-chart" [options]="myCharts[6]?.options"></chart>
-              <h4>sales cycle length</h4>
-            </div>
-          </div>
+      <div class="user">
+        <span class="name">Jessica</span> 
+        <img src="../../assets/img/jessica.jpg" alt="">
+      </div>  
+      <div class="person-rates">
+        <h4 class="title">lead Conversation Rate</h4>
+        <span class="percent-count">22%</span>
+        <chart class="mount-chart" [options]="myCharts[4]?.options"></chart>
+        <h4 class="title">sales cycle length</h4>
+        <span class="percent-count">22%</span>
+        <chart class="line-chart" [options]="myCharts[8]?.options"></chart>
       </div>
+    </div>
 
-</div>
+      <div class="card">
+        <div class="user">
+          <span class="name">Jack</span>
+          <img src="../../assets/img/jack.jpg" alt="">
+        </div>  
+        <div class="person-rates">
+          <h4 class="title">lead Conversation Rate</h4>
+          <span class="percent-count">22%</span>
+          <chart class="mount-chart" [options]="myCharts[3]?.options"></chart>
+          <h4 class="title">sales cycle length</h4>
+          <span class="percent-count">22%</span>
+          <chart class="line-chart" [options]="myCharts[6]?.options"></chart>
+        </div>
+      </div>
+    
+  </div>  
 
 </div>

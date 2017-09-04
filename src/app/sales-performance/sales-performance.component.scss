@@ -130,7 +130,7 @@
     border-bottom: 2px solid #EDEDED;
 
     chart {
-      height: 130px;
+      height: 160px;
     }
 
     &:last-child {
@@ -138,11 +138,12 @@
     }
 
     .points {
+      margin-top: 25px;
       width: 40%;
     }
 
     .caption {
-      margin-bottom: 5px;
+      margin-bottom: 15px;
     }
 
     .chart-hw {
