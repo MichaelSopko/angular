@@ -71,9 +71,11 @@
 }
 
 .bottom-section {
-  // margin: 0 10px;
+  flex-wrap: wrap;
   color: #46E4E0; 
   background: transparent;
+  padding: 1rem 0;
+  margin: 0;
   @extend .top-section;
 
   .card {
@@ -82,9 +84,10 @@
   }
 
   .quotter-width {
-    margin: 0 10px 10px;
-    padding: 20px 40px;
-    width: 25%;
+    display: inline-block;
+    margin: 0 5px 10px;
+    // padding: 20px 40px;
+    width: 49%;
     background-color: #fff;
 
     .points {
@@ -98,7 +101,7 @@
 
   .half-width {
     margin: 0 10px 10px;
-    width: 50%;
+    width: 100%;
     background-color: #fff;
   }
 
@@ -184,4 +187,23 @@
     }
   }
 
+}
+
+@media (min-width: 1200px) {
+  .bottom-section {
+    flex-wrap: nowrap;
+
+    .quotter-width {
+      width: 25%;
+
+    }
+
+    .half-width {
+      width: 50%;
+    }
+
+    .list-caption {
+      font-size: 1.4rem;
+    }
+  }
 }

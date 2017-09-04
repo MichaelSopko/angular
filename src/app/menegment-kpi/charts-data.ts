@@ -10,7 +10,7 @@ export const chartData: any =
     options: {
       chart: {
         type: 'column',
-        backgroundColor: '#F8F8F9',
+        backgroundColor: 'transparent',
       },
       title: {
         text: ''

@@ -3,6 +3,11 @@
     flex-wrap: wrap;
 }
 
+.content-title {
+    margin-bottom: 0;
+    font-size: 2.4rem;
+}
+
 .blue {
     display: block;
     text-align: left;
@@ -26,7 +31,7 @@
 }
 
 .container-left {
-    width: 50%;
+    width: 100%;
     padding: 10px;
 
     .sales-cycle-item {
@@ -45,12 +50,13 @@
             font-weight: bold;
         }
 
-        h1 {
+        .chart-heading {
             margin: 0;
-            font-size: 5rem;
+            font-size: 3.3rem;
         }
 
         .clarification {
+            font-size: 1.4rem;
             text-transform: uppercase;
         }
     }
@@ -72,11 +78,11 @@
         }
 
         chart {
-            width: 100%;
+            width: 70%;
         }
 
         .average-list {
-            display: none;
+            display: block;
             width: 30%;
             padding: 10px 45px 15px;
             background-color: #FAFAFA;
@@ -90,7 +96,7 @@
 }
 
 .cards-wrapper {
-    width: 50%;
+    width: 100%;
 }
 
 .card {
@@ -99,6 +105,7 @@
     margin: 10px 0;
     padding: 5px;
     background: #fff;
+
 }
 
 
@@ -117,7 +124,6 @@
         display: block;
         margin: 25px auto;
         width: 100%;
-        // height: 120px;
         
     }
 }
@@ -129,17 +135,17 @@
     .title {
         display: inline-block;
         color: #B0A9A9;
-        margin: 0;
+        margin: 0 15px;
     }
 
     .percent-count {
-        display: inline-block;
         font-weight: bold;
         color: #000;
+
     }
 
     chart {
-        height: 90px;
+        height: 170px;
         
         &.line-chart {
             height: 80px;
@@ -153,14 +159,56 @@
     height: 150px;
 }
 
-@media (min-width: 1400px) {
-  
+@media (min-width: 1200px) {
+
     .container-left {
+        width: 50%;
 
         .sales-stages-wrapper {
-            
+
+            chart {
+                width: 100%;
+            }
+
+            .average-list {
+                display: none;
+            }
+        }
+    }
+
+    .cards-wrapper {
+        width: 50%;
+
+        chart {
+            height: 90px;
+        }
+
+        .title {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .content-title {
+        font-size: 3rem;
+    }
+
+    .container-left {
+
+        .chart-heading {
+            font-size: 5rem;
+        }
+
+        .clarification {
+            font-size: 4rem;
+        }
+
+        .sales-stages-wrapper {
+
             chart {
                 width: 70%;
+    
             }
     
             .average-list {
