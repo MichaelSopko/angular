@@ -125,11 +125,31 @@ chart {
   height: 25rem;
 }
 
-@media (max-width: 1600px) {
-  chart {
-    height: 20rem;
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+  
+  .left-side {
+    .fp-item {
+      width: 100%;
+    }
+  }
+
+  .label {
+    font-size: 1.3rem;
+  }
+
+  .value {
+    font-size: 1.2rem;
   }
 }
+
 
 @media (min-width: 1800px) {
   .fp-item {
