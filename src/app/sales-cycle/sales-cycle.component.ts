@@ -76,10 +76,10 @@ export class SalesCycleComponent implements OnInit {
         type: 'funnel',
         name: 'Unique users',
         data: [
-          ['Opportunities </br> 1.478', 478],
-          ['Proposal </br> 455', 478],
-          ['Negotiation </br> 357', 478],
-          ['Closing </br> 111', 478]
+          ['<span style="left: 50%; transform: translate(-43%, 0); position: absolute; text-align: center;">Opportunities </br> 1.478</span>', 478],
+          ['<span style="left: 50%; transform: translate(-41%, 0); position: absolute; text-align: center;">Proposal </br> 455</span>', 478],
+          ['<span style="left: 50%; transform: translate(-42%, 0); position: absolute; text-align: center;">Negotiation </br> 357</span>', 478],
+          ['<span style="left: 50%; transform: translate(-40%, 0); position: absolute; text-align: center;">Closing </br> 111</span>', 478]
         ]
       }]
     };
@@ -123,7 +123,7 @@ export class SalesCycleComponent implements OnInit {
       this.series[0].data.forEach(function (p, i) {
         console.log(p);
         p.dataLabel.attr({
-          x: (target.plotWidth - target.plotLeft) / 2 - (250 * target.plotLeft / p.plotY) ,
+          x: (target.plotWidth - target.plotLeft) / 2,
           y: p.plotY - 20,
           'text-anchor': 'middle'
         });

@@ -87,7 +87,7 @@
             width: 30%;
             padding: 10px 45px 15px;
             background-color: #FAFAFA;
-            
+
 
             li {
                 margin: 30px auto;
@@ -95,6 +95,14 @@
         }
     }
 }
+
+
+  .chart-text {
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+  }
+
 
 .cards-wrapper {
     width: 100%;
@@ -125,7 +133,7 @@
         display: block;
         margin: 25px auto;
         width: 100%;
-        
+
     }
 }
 
@@ -147,7 +155,7 @@
 
     chart {
         height: 170px;
-        
+
         &.line-chart {
             height: 80px;
         }
@@ -257,9 +265,9 @@
 
             chart {
                 width: 70%;
-    
+
             }
-    
+
             .average-list {
                 display: block;
             }
